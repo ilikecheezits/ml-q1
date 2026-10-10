@@ -1,0 +1,84 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.InfoGainAttributeEval 
+Search:       weka.attributeSelection.Ranker -T -1.7976931348623157E308 -N -1
+Relation:     train
+Instances:    34877
+Attributes:   31
+              month
+              season
+              NOAAClimRegion
+              TempZone
+              HumidZone
+              bin_PlantSize_kW
+              plant_age_months
+              active_snow_tickets
+              snow_production_level
+              PR_class
+              snow_value_mm
+              total_daily_snow_mm
+              low_irradiation
+              cumulative_snow_mm
+              hurr_production_level
+              HurricanePrep
+              HurricanePostInspection
+              hurricane
+              nearest_hurricane
+              wind_speed_mean
+              rain_value_mm
+              nearest_rain
+              storm_active_tickets
+              storm_production_level
+              lightning
+              storm
+              duration_minutes_storm
+              nearest_storm
+              flood
+              duration_minutes_flood
+              nearest_flood
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Attribute ranking.
+
+Attribute Evaluator (supervised, Class (nominal): 10 PR_class):
+	Information Gain Ranking Filter
+
+Ranked attributes:
+ 0.1240285    3 NOAAClimRegion
+ 0.1233366    1 month
+ 0.1106349   14 cumulative_snow_mm
+ 0.1104574    7 plant_age_months
+ 0.0955948    2 season
+ 0.0848938    4 TempZone
+ 0.0799488   22 nearest_rain
+ 0.0770449   13 low_irradiation
+ 0.0528953   12 total_daily_snow_mm
+ 0.0500091   31 nearest_flood
+ 0.0395276   11 snow_value_mm
+ 0.0352551   19 nearest_hurricane
+ 0.0310373   20 wind_speed_mean
+ 0.0271747   21 rain_value_mm
+ 0.0252828    6 bin_PlantSize_kW
+ 0.0185041   28 nearest_storm
+ 0.0070113    5 HumidZone
+ 0.0030639    8 active_snow_tickets
+ 0.0029613    9 snow_production_level
+ 0.0011207   18 hurricane
+ 0.0006473   15 hurr_production_level
+ 0.0006063   30 duration_minutes_flood
+ 0.000418    29 flood
+ 0.0003894   24 storm_production_level
+ 0.000319    23 storm_active_tickets
+ 0.0000485   17 HurricanePostInspection
+ 0           27 duration_minutes_storm
+ 0           26 storm
+ 0           25 lightning
+ 0           16 HurricanePrep
+
+Selected attributes: 3,1,14,7,2,4,22,13,12,31,11,19,20,21,6,28,5,8,9,18,15,30,29,24,23,17,27,26,25,16 : 30
+

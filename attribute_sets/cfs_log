@@ -1,0 +1,66 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.CfsSubsetEval -P 1 -E 1
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     train
+Instances:    34877
+Attributes:   31
+              month
+              season
+              NOAAClimRegion
+              TempZone
+              HumidZone
+              bin_PlantSize_kW
+              plant_age_months
+              active_snow_tickets
+              snow_production_level
+              PR_class
+              snow_value_mm
+              total_daily_snow_mm
+              low_irradiation
+              cumulative_snow_mm
+              hurr_production_level
+              HurricanePrep
+              HurricanePostInspection
+              hurricane
+              nearest_hurricane
+              wind_speed_mean
+              rain_value_mm
+              nearest_rain
+              storm_active_tickets
+              storm_production_level
+              lightning
+              storm
+              duration_minutes_storm
+              nearest_storm
+              flood
+              duration_minutes_flood
+              nearest_flood
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 318
+	Merit of best subset found:    0.114
+
+Attribute Subset Evaluator (supervised, Class (nominal): 10 PR_class):
+	CFS Subset Evaluator
+	Including locally predictive attributes
+
+Selected attributes: 1,2,3,4,12,13,14,22 : 8
+                     month
+                     season
+                     NOAAClimRegion
+                     TempZone
+                     total_daily_snow_mm
+                     low_irradiation
+                     cumulative_snow_mm
+                     nearest_rain
+
