@@ -1,0 +1,2497 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     correlation_train
+Instances:    34877
+Attributes:   11
+              low_irradiation
+              NOAAClimRegion
+              total_daily_snow_mm
+              TempZone
+              season
+              cumulative_snow_mm
+              snow_value_mm
+              month
+              wind_speed_mean
+              plant_age_months
+              PR_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+low_irradiation <= 0
+|   month <= -1.001925
+|   |   total_daily_snow_mm <= -0.144389
+|   |   |   NOAAClimRegion = Northwest: High (30.0/2.0)
+|   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   season = Spring
+|   |   |   |   |   plant_age_months <= -1.573309: Low (41.0/9.0)
+|   |   |   |   |   plant_age_months > -1.573309
+|   |   |   |   |   |   plant_age_months <= -1.530505: High (22.0/9.0)
+|   |   |   |   |   |   plant_age_months > -1.530505
+|   |   |   |   |   |   |   plant_age_months <= -1.230875
+|   |   |   |   |   |   |   |   plant_age_months <= -1.444896
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.270738: Medium (11.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.270738: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.444896: High (14.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > -1.230875: Low (51.0/28.0)
+|   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   season = Winter: Low (60.0/13.0)
+|   |   |   NOAAClimRegion = West
+|   |   |   |   cumulative_snow_mm <= 0.460943
+|   |   |   |   |   plant_age_months <= 0
+|   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   TempZone = T5: High (142.0/17.0)
+|   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   plant_age_months <= -0.674419
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.760028: High (61.0/3.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.760028
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.042464: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.042464: High (2.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.674419
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.588811
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.629437: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.629437: Low (37.0/16.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.588811
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.331985: High (75.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.331985
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768: Low (20.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768: High (35.0/2.0)
+|   |   |   |   |   |   |   TempZone = T1: High (38.0/2.0)
+|   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   plant_age_months <= -0.588811
+|   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   plant_age_months <= -1.188071
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.530505
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.127581: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.127581: Medium (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.530505
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.14641
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.843955
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.359288: High (26.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.359288
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.462289: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.462289
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.483079: Low (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.483079: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.843955: Low (7.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.14641: Low (7.0/3.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -1.188071
+|   |   |   |   |   |   |   |   |   |   TempZone = T5: High (78.0/18.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.845636
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.675495: High (55.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.675495: Low (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.845636: Low (25.0/9.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.14641: High (138.0/33.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.14641
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.505522: High (9.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.505522
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.121361: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.121361
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.325304: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.325304: Medium (2.0)
+|   |   |   |   |   |   |   plant_age_months > -0.588811
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.374789: High (73.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.374789
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.221535: High (13.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.221535
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768
+|   |   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 2.669927: High (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 2.669927
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 4.199574: Medium (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 4.199574: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Winter: High (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.762433: Medium (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.762433: Low (14.0/5.0)
+|   |   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.503202: High (152.0/40.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.503202
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.663377: High (9.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.663377
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.289181
+|   |   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.240696
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.561432: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.561432: High (28.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.240696: Medium (85.0/41.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Winter: High (28.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.289181
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.246376: Low (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.246376
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Spring: High (23.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Winter: Medium (26.0/9.0)
+|   |   |   |   |   |   |   |   TempZone = T1: High (41.0/1.0)
+|   |   |   |   |   plant_age_months > 0
+|   |   |   |   |   |   plant_age_months <= 0.909339
+|   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   plant_age_months <= 0.438492
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.224471
+|   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.370491
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.096058: High (66.0/26.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.096058: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.370491
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.010449: Low (13.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.010449: Medium (34.0/13.0)
+|   |   |   |   |   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.138862
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.096058
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.183527
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.710294: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.710294
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.010449: High (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.010449
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.456841: High (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.456841: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.183527: Medium (17.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.096058: High (13.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.138862
+|   |   |   |   |   |   |   |   |   |   |   |   month <= -1.554266: Medium (38.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   month > -1.554266: High (31.0/7.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.224471: High (100.0/13.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.438492
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.652514
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.566905
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.136883
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.481296
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.062152: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.062152: Medium (44.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.481296
+|   |   |   |   |   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.569586
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.594506
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.778914: High (16.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.778914
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.669519: Medium (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.669519
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.654296: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.654296: Medium (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.594506: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.569586: Medium (19.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.031204
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.009147: Medium (27.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.009147: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.031204: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.524101
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.438221
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.672532: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.672532: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.438221: Medium (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.524101
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.09169
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.469152
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.085366
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.765827
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.049019: Medium (14.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.049019: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.765827: Medium (22.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.085366: High (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.469152: Medium (24.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.09169: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.136883: Medium (28.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.566905
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.285891: Medium (35.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.285891
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.141386
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.208016
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.246421: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.246421: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.208016: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.141386: Medium (31.0/5.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.652514
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.037128: Medium (53.0/12.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.037128: High (61.0/10.0)
+|   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   plant_age_months <= 0.695318
+|   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.106438: High (150.0/7.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.106438
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.229524: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.229524
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.296513: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.296513
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 2.042484: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 2.042484: High (2.0)
+|   |   |   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.053254
+|   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.542275
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.010449
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.300578: Medium (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.300578: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.010449
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.492109: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.492109
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.140142: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.140142: Medium (11.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.542275: High (7.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.701218: High (14.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.701218: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.053254
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.566905
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.524101
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.354287: High (56.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.354287: Low (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.524101: High (44.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.566905
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.469427: High (26.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.469427
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.652514: High (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.652514
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Spring: High (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.892465: Medium (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.892465
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.36594: High (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.36594: Medium (15.0/4.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.695318
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.738122
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.611451
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.484027
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.33403
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.107249: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.107249: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Winter: Medium (21.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.33403: Medium (8.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.484027: High (5.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.611451
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.963699
+|   |   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.751029: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.751029
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.827053: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.827053: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Winter: High (7.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.963699
+|   |   |   |   |   |   |   |   |   |   |   |   season = Spring: Medium (26.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.611988: Medium (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.611988
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.82747
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.725421: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.725421: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.82747: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.738122: Medium (73.0/10.0)
+|   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   plant_age_months > 0.909339
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.309465
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.260754
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.278009
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.017556: High (49.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.017556
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 1.037752
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.065508: Low (18.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.065508: High (9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 1.037752: High (17.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.278009: Low (16.0/3.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.260754
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 1.637012: High (20.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 1.637012
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.252031: High (88.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.252031: Medium (18.0/6.0)
+|   |   |   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 1.123361
+|   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.208664: Medium (84.0/35.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.208664: High (8.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.015686
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.000404: High (34.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.000404: Medium (18.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.015686: High (24.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 1.123361: High (169.0/10.0)
+|   |   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   |   plant_age_months <= 3.177966
+|   |   |   |   |   |   |   |   |   |   month <= -1.554266: Medium (15.0/4.0)
+|   |   |   |   |   |   |   |   |   |   month > -1.554266: Low (11.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 3.177966: High (41.0/14.0)
+|   |   |   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.309465: Medium (28.0/3.0)
+|   |   |   |   cumulative_snow_mm > 0.460943: High (180.0/7.0)
+|   |   |   NOAAClimRegion = Southeast
+|   |   |   |   plant_age_months <= 0.695318
+|   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   cumulative_snow_mm <= 0.60086
+|   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   plant_age_months <= 0.609709
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.239359: High (57.0/11.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.239359
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.566905: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.566905
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.113505: High (13.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.113505: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.609709: Medium (27.0/6.0)
+|   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   season = Spring: Medium (92.0/30.0)
+|   |   |   |   |   |   |   |   season = Autumn: Medium (0.0)
+|   |   |   |   |   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.652514
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.239359
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.992489: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.992489: High (42.0/14.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.239359
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.177499
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.540312: Medium (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.540312: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.177499: Medium (4.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.652514: Medium (19.0/4.0)
+|   |   |   |   |   |   cumulative_snow_mm > 0.60086
+|   |   |   |   |   |   |   plant_age_months <= 0.609709: Medium (5.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > 0.609709: High (26.0/1.0)
+|   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   TempZone = T6: Medium (37.0/5.0)
+|   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   plant_age_months > 0.695318: Medium (409.0/66.0)
+|   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   cumulative_snow_mm <= 2.321255: Medium (9.0)
+|   |   |   |   cumulative_snow_mm > 2.321255
+|   |   |   |   |   plant_age_months <= 1.551403: High (38.0/9.0)
+|   |   |   |   |   plant_age_months > 1.551403
+|   |   |   |   |   |   cumulative_snow_mm <= 9.533843: Medium (14.0/7.0)
+|   |   |   |   |   |   cumulative_snow_mm > 9.533843: High (11.0/2.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   plant_age_months <= 2.707119
+|   |   |   |   |   season = Spring
+|   |   |   |   |   |   plant_age_months <= 0.010449
+|   |   |   |   |   |   |   cumulative_snow_mm <= 3.704968: Medium (25.0/4.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 3.704968
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.341152
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.075159
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.37025: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.37025: Medium (17.0/4.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.075159
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.706368
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.028879: Low (6.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.028879
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.128981
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.107716: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.107716: Medium (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.128981
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.204492: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.204492: Medium (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.706368: Low (13.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 7.341152
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.857422: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.857422: Medium (15.0/4.0)
+|   |   |   |   |   |   plant_age_months > 0.010449
+|   |   |   |   |   |   |   plant_age_months <= 1.722621
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.341152
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.823731
+|   |   |   |   |   |   |   |   |   |   TempZone = T5: High (32.0/11.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.932137
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.053254: High (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.053254: Medium (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.932137: High (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.823731: High (20.0/2.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 7.341152
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.441844: Low (3.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.441844: High (13.0/2.0)
+|   |   |   |   |   |   |   plant_age_months > 1.722621
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 3.9901
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.992491: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.992491
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 2.988396: High (6.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 2.988396: Low (4.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 3.9901: High (11.0/2.0)
+|   |   |   |   |   |   |   |   TempZone = T4: Low (12.0/4.0)
+|   |   |   |   |   |   |   |   TempZone = T6: Low (0.0)
+|   |   |   |   |   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   plant_age_months <= 1.936642
+|   |   |   |   |   |   |   plant_age_months <= -0.246376
+|   |   |   |   |   |   |   |   wind_speed_mean <= -1.029239
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.359474: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.359474: High (2.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -1.029239: Medium (14.0/3.0)
+|   |   |   |   |   |   |   plant_age_months > -0.246376
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.121645: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.121645: High (64.0/15.0)
+|   |   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.032355
+|   |   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.075159
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.749845
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.326638: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.326638: High (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.749845
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.833038: Medium (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.833038: High (21.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.528127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.210069
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.164867: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.164867: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.210069: Low (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.528127
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.11796: High (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.11796: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.075159: High (17.0)
+|   |   |   |   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 3.422135
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 2.215524: High (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 2.215524
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 2.748648
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 2.487223
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.347093: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.347093: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 2.487223: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 2.748648: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.878204
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.180437: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.180437: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.878204: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 3.422135: High (20.0/3.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.032355
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.052816
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.152778: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.152778: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.052816: High (43.0/3.0)
+|   |   |   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   plant_age_months > 1.936642
+|   |   |   |   |   |   |   plant_age_months <= 2.065055: Medium (7.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > 2.065055
+|   |   |   |   |   |   |   |   plant_age_months <= 2.664315
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.158564: Medium (7.0/3.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.158564: Low (9.0/3.0)
+|   |   |   |   |   |   |   |   plant_age_months > 2.664315: High (13.0/6.0)
+|   |   |   |   plant_age_months > 2.707119: High (76.0/14.0)
+|   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   NOAAClimRegion = Southwest
+|   |   |   |   cumulative_snow_mm <= 2.421: High (59.0/13.0)
+|   |   |   |   cumulative_snow_mm > 2.421
+|   |   |   |   |   month <= -1.554266: Low (4.0)
+|   |   |   |   |   month > -1.554266: High (14.0/8.0)
+|   |   total_daily_snow_mm > -0.144389
+|   |   |   total_daily_snow_mm <= 2.71714
+|   |   |   |   NOAAClimRegion = Northwest: High (63.0/21.0)
+|   |   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   |   plant_age_months <= -0.588811
+|   |   |   |   |   |   plant_age_months <= -1.402092
+|   |   |   |   |   |   |   wind_speed_mean <= 0.28778: Low (19.0)
+|   |   |   |   |   |   |   wind_speed_mean > 0.28778: Medium (3.0/1.0)
+|   |   |   |   |   |   plant_age_months > -1.402092
+|   |   |   |   |   |   |   season = Spring: High (12.0/4.0)
+|   |   |   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.070493
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.760028
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.059658
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.0096: High (24.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.0096
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.315597: Low (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.315597: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.059658
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.974049
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.345533: Low (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.345533: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.974049
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.618756: High (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.618756: Low (12.0/4.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.760028
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.631615: Low (64.0/17.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.631615
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.67135: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.67135: Low (22.0/8.0)
+|   |   |   |   |   |   |   |   total_daily_snow_mm > 0.070493: Low (7.0/1.0)
+|   |   |   |   |   plant_age_months > -0.588811: Low (32.0)
+|   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   total_daily_snow_mm <= -0.051681: Low (3.0/1.0)
+|   |   |   |   |   total_daily_snow_mm > -0.051681
+|   |   |   |   |   |   plant_age_months <= 1.679816
+|   |   |   |   |   |   |   plant_age_months <= 1.594208: High (2.0)
+|   |   |   |   |   |   |   plant_age_months > 1.594208: Medium (4.0/1.0)
+|   |   |   |   |   |   plant_age_months > 1.679816: High (28.0/3.0)
+|   |   |   |   NOAAClimRegion = Southeast
+|   |   |   |   |   season = Spring
+|   |   |   |   |   |   plant_age_months <= 0.524101
+|   |   |   |   |   |   |   wind_speed_mean <= -1.295564: Medium (3.0)
+|   |   |   |   |   |   |   wind_speed_mean > -1.295564: Low (17.0/3.0)
+|   |   |   |   |   |   plant_age_months > 0.524101: Medium (20.0/6.0)
+|   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   wind_speed_mean <= -0.16546: High (46.0/5.0)
+|   |   |   |   |   |   wind_speed_mean > -0.16546: Medium (8.0/2.0)
+|   |   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   |   total_daily_snow_mm <= 1.680517
+|   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   snow_value_mm <= 0.775051
+|   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.111241: Medium (2.0)
+|   |   |   |   |   |   |   |   total_daily_snow_mm > 1.111241: Low (4.0/1.0)
+|   |   |   |   |   |   |   snow_value_mm > 0.775051: Low (4.0/1.0)
+|   |   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   cumulative_snow_mm <= 3.811803: Medium (4.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 3.811803: High (3.0/1.0)
+|   |   |   |   |   total_daily_snow_mm > 1.680517
+|   |   |   |   |   |   total_daily_snow_mm <= 2.283964: High (8.0)
+|   |   |   |   |   |   total_daily_snow_mm > 2.283964
+|   |   |   |   |   |   |   total_daily_snow_mm <= 2.3293: Medium (3.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > 2.3293: High (2.0)
+|   |   |   |   NOAAClimRegion = Northeast
+|   |   |   |   |   season = Spring
+|   |   |   |   |   |   plant_age_months <= 1.851033
+|   |   |   |   |   |   |   plant_age_months <= 0.010449
+|   |   |   |   |   |   |   |   plant_age_months <= -1.016854
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.772199: Medium (3.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.772199: High (22.0/8.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.016854
+|   |   |   |   |   |   |   |   |   snow_value_mm <= 0.418435
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.341152: Medium (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.341152: High (3.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > 0.418435
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.050039: High (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.050039
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.075159: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.075159
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.268968: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.268968: Low (5.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > 0.010449
+|   |   |   |   |   |   |   |   snow_value_mm <= 1.443878: High (12.0/1.0)
+|   |   |   |   |   |   |   |   snow_value_mm > 1.443878
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.138592: Low (4.0/2.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -1.138592: Medium (7.0/1.0)
+|   |   |   |   |   |   plant_age_months > 1.851033
+|   |   |   |   |   |   |   cumulative_snow_mm <= 3.349311: Low (4.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 3.349311: High (5.0)
+|   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   plant_age_months <= -1.059658: Low (5.0)
+|   |   |   |   |   |   plant_age_months > -1.059658
+|   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.513717: High (16.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 0.513717
+|   |   |   |   |   |   |   |   |   plant_age_months <= 1.808229: Low (5.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 1.808229: High (3.0)
+|   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 4.103041
+|   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.289181: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.289181
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.718046: High (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.718046
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.262562: Low (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.262562: High (10.0/3.0)
+|   |   |   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.184231
+|   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.019862: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.019862
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.535435: High (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.535435
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.105656
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.504539
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.844779: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 1.844779: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.504539: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.105656: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.184231: High (6.0/1.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 4.103041: High (14.0/3.0)
+|   |   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   NOAAClimRegion = South
+|   |   |   |   |   season = Spring: Medium (17.0/6.0)
+|   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   plant_age_months <= -1.102462
+|   |   |   |   |   |   |   wind_speed_mean <= -0.359561: Medium (6.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.359561
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.281105: High (9.0/3.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.281105: Medium (2.0)
+|   |   |   |   |   |   plant_age_months > -1.102462: High (27.0/9.0)
+|   |   |   |   NOAAClimRegion = Southwest
+|   |   |   |   |   season = Spring: Low (4.0)
+|   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   total_daily_snow_mm <= 0.592618
+|   |   |   |   |   |   |   snow_value_mm <= 1.856144: High (7.0/2.0)
+|   |   |   |   |   |   |   snow_value_mm > 1.856144: Low (3.0/1.0)
+|   |   |   |   |   |   total_daily_snow_mm > 0.592618: Low (3.0)
+|   |   |   total_daily_snow_mm > 2.71714
+|   |   |   |   TempZone = T5
+|   |   |   |   |   cumulative_snow_mm <= 1.509575: High (20.0/2.0)
+|   |   |   |   |   cumulative_snow_mm > 1.509575: Low (15.0/2.0)
+|   |   |   |   TempZone = T4
+|   |   |   |   |   season = Spring
+|   |   |   |   |   |   NOAAClimRegion = Northwest: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Upper Midwest: Low (26.0/2.0)
+|   |   |   |   |   |   NOAAClimRegion = West: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southeast: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Ohio Valley: Medium (3.0)
+|   |   |   |   |   |   NOAAClimRegion = Northeast
+|   |   |   |   |   |   |   total_daily_snow_mm <= 6.804868
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 4.463138: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 4.463138
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.446916: Medium (5.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.446916
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.710537: High (2.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.710537: Medium (2.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > 6.804868: Low (11.0)
+|   |   |   |   |   |   NOAAClimRegion = South: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southwest: Low (0.0)
+|   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   season = Winter: Low (178.0/16.0)
+|   |   |   |   TempZone = T6: Low (0.0)
+|   |   |   |   TempZone = T1: Low (0.0)
+|   month > -1.001925
+|   |   month <= 0.655098
+|   |   |   NOAAClimRegion = Northwest
+|   |   |   |   month <= -0.725754
+|   |   |   |   |   plant_age_months <= -0.460398: Medium (13.0/2.0)
+|   |   |   |   |   plant_age_months > -0.460398
+|   |   |   |   |   |   wind_speed_mean <= -0.733568: High (5.0)
+|   |   |   |   |   |   wind_speed_mean > -0.733568
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.60086
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.833031: Medium (16.0/5.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.833031: High (3.0/1.0)
+|   |   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.597372: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.597372: Medium (11.0/3.0)
+|   |   |   |   |   |   |   |   TempZone = T6: Medium (0.0)
+|   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.60086: Medium (17.0/5.0)
+|   |   |   |   month > -0.725754
+|   |   |   |   |   plant_age_months <= -0.760028
+|   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   season = Autumn: High (21.0/3.0)
+|   |   |   |   |   |   season = Summer: Medium (106.0/12.0)
+|   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   plant_age_months > -0.760028: Medium (382.0/22.0)
+|   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   cumulative_snow_mm <= 1.15531
+|   |   |   |   |   wind_speed_mean <= -1.118941
+|   |   |   |   |   |   plant_age_months <= -0.246376: Low (81.0)
+|   |   |   |   |   |   plant_age_months > -0.246376: Medium (6.0/1.0)
+|   |   |   |   |   wind_speed_mean > -1.118941
+|   |   |   |   |   |   cumulative_snow_mm <= -0.14641
+|   |   |   |   |   |   |   plant_age_months <= -1.402092
+|   |   |   |   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   |   |   |   plant_age_months <= -1.487701: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -1.487701
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.244212: High (4.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.244212: Low (4.0/2.0)
+|   |   |   |   |   |   |   |   month > -0.173413: Medium (56.0/26.0)
+|   |   |   |   |   |   |   plant_age_months > -1.402092: High (31.0/9.0)
+|   |   |   |   |   |   cumulative_snow_mm > -0.14641
+|   |   |   |   |   |   |   plant_age_months <= -1.016854
+|   |   |   |   |   |   |   |   plant_age_months <= -1.359288
+|   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.736425
+|   |   |   |   |   |   |   |   |   |   snow_value_mm <= -0.077578
+|   |   |   |   |   |   |   |   |   |   |   month <= 0.102757
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.444896
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.530505: Low (75.0/22.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.530505
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.487701
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month <= -0.725754: High (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month > -0.725754: Low (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.487701
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month <= -0.725754: Medium (13.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month > -0.725754: High (24.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Low (91.0/22.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Winter: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.444896
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.402092
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   month <= -0.173413: Medium (57.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   month > -0.173413: Low (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.402092: Medium (50.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   month > 0.102757: Low (98.0/23.0)
+|   |   |   |   |   |   |   |   |   |   snow_value_mm > -0.077578: Medium (61.0/30.0)
+|   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.736425: Low (21.0/2.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.359288
+|   |   |   |   |   |   |   |   |   plant_age_months <= -1.102462
+|   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.498675
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.273679: Medium (15.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.273679: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.498675: High (18.0/4.0)
+|   |   |   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.273679: High (32.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.273679
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.188071: Medium (14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.188071: High (13.0/4.0)
+|   |   |   |   |   |   |   |   |   |   season = Summer: Medium (152.0/35.0)
+|   |   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -1.102462
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.058554
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.252336
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= -0.098877
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.33389
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.059658
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.511677
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.763641: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.763641: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.511677: High (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.059658: Medium (39.0/15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.33389: Low (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > -0.098877
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.234151: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.234151: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.252336
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.092435: Medium (13.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.092435: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.058554: Low (35.0/8.0)
+|   |   |   |   |   |   |   plant_age_months > -1.016854
+|   |   |   |   |   |   |   |   month <= 0.102757
+|   |   |   |   |   |   |   |   |   month <= -0.173413: Low (144.0/50.0)
+|   |   |   |   |   |   |   |   |   month > -0.173413
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.974049
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.443987: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.443987: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.974049: Low (124.0/49.0)
+|   |   |   |   |   |   |   |   month > 0.102757
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.931245: Medium (7.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.931245: Low (204.0/78.0)
+|   |   |   |   cumulative_snow_mm > 1.15531: Low (66.0)
+|   |   |   NOAAClimRegion = West
+|   |   |   |   plant_age_months <= 0.652514
+|   |   |   |   |   month <= -0.449584
+|   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   plant_age_months <= -1.444896
+|   |   |   |   |   |   |   |   month <= -0.725754
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.443922: High (44.0/4.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.443922
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.487701: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.487701: High (2.0)
+|   |   |   |   |   |   |   |   month > -0.725754: Medium (30.0/14.0)
+|   |   |   |   |   |   |   plant_age_months > -1.444896
+|   |   |   |   |   |   |   |   plant_age_months <= -0.331985
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.588811
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.230875
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.402092: Medium (17.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.402092
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.316484: Low (34.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.316484
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.020643: Medium (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.020643: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.230875
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.016854
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.145266
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.060234: Medium (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.060234: High (16.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.145266: Medium (31.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.016854
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.931245: High (77.0/25.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.931245
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.007615: Medium (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.007615
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.244436: High (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.244436
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.912585: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.912585
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.082224: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.082224: Medium (56.0/4.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.588811
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.460398
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.503202: Medium (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.503202: Low (59.0/17.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.460398
+|   |   |   |   |   |   |   |   |   |   |   month <= -0.725754
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.417594: Medium (35.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.417594: Low (23.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   month > -0.725754: Medium (111.0/31.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.331985
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.340108: Medium (114.0/13.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.340108
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.246376: Medium (25.0/6.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.246376
+|   |   |   |   |   |   |   |   |   |   |   month <= -0.725754: High (71.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   month > -0.725754
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.203572
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 5.175305: Medium (17.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 5.175305: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.203572
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.427478
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.000404: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.000404: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768: Medium (24.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.427478: High (36.0/9.0)
+|   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   month <= -0.725754
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.167297
+|   |   |   |   |   |   |   |   |   plant_age_months <= -1.487701
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.17903: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.17903
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.027949: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.027949
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.011224: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.011224: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -1.487701: Medium (96.0/22.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.167297
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.267275
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.717224
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.974049
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.388539: High (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.388539: Medium (117.0/45.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.974049: Medium (123.0/19.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.717224
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.224471
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.053254: High (66.0/25.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.053254
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.096058: Medium (27.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.096058
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.181666
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.30359: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.30359
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.526737: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.526737
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.92802: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.92802: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.181666: Medium (10.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.224471
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.638158: Medium (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.638158
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.49188
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.304204
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.109124: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.109124
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.155947: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.155947: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.304204: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.49188
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 2.667018: Medium (25.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 2.667018: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.267275
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.681149
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.60273
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.201685: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.201685: Medium (8.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.60273: High (3.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.681149
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.739438: Medium (33.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.739438
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 2.257601: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 2.257601: Medium (13.0/4.0)
+|   |   |   |   |   |   |   month > -0.725754
+|   |   |   |   |   |   |   |   plant_age_months <= -0.631615: Medium (324.0/17.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.631615
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.200311: Medium (53.0/2.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.200311
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.503202
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 2.345414: Medium (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 2.345414: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.503202
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.853505
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.540223: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.540223: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.853505: High (23.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964: Medium (195.0/40.0)
+|   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   month > -0.449584
+|   |   |   |   |   |   plant_age_months <= -1.487701: High (44.0/3.0)
+|   |   |   |   |   |   plant_age_months > -1.487701
+|   |   |   |   |   |   |   plant_age_months <= -0.203572
+|   |   |   |   |   |   |   |   plant_age_months <= -0.417594
+|   |   |   |   |   |   |   |   |   month <= -0.173413: Medium (493.0/60.0)
+|   |   |   |   |   |   |   |   |   month > -0.173413
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.016854
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.188071: Low (50.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.188071
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.145266: Medium (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.145266
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.592168: Low (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.592168: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Medium (163.0/41.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.145266: Medium (213.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.145266
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.538557: Low (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.538557: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.016854
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T5: Medium (274.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Autumn: Medium (264.0/13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.72215
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.674419
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month <= 0.102757
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.931245: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.931245
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.845636
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.634555
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.418782: Low (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.418782: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.634555: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.845636: Medium (26.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month > 0.102757: Medium (22.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.674419: Low (11.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.72215: Medium (468.0/66.0)
+|   |   |   |   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.417594
+|   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.003283: Medium (261.0/37.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.003283
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.429749
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.331985: Medium (31.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.331985
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Spring: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.246376
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.612394: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.612394: Medium (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.246376: Low (20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Summer: Low (48.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   season = Winter: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.429749: Medium (79.0/14.0)
+|   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   season = Autumn: Low (23.0)
+|   |   |   |   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.688137
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.798436: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.798436: Medium (74.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.688137
+|   |   |   |   |   |   |   |   |   |   |   |   month <= 0.102757
+|   |   |   |   |   |   |   |   |   |   |   |   |   month <= -0.173413: High (22.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   month > -0.173413: Medium (28.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   month > 0.102757: High (23.0/2.0)
+|   |   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   plant_age_months > -0.203572: Medium (1729.0/132.0)
+|   |   |   |   plant_age_months > 0.652514
+|   |   |   |   |   month <= 0.102757
+|   |   |   |   |   |   season = Spring: High (45.0/2.0)
+|   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   plant_age_months <= 0.823731
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.107144: High (3.0/1.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.107144: Low (9.0/3.0)
+|   |   |   |   |   |   |   plant_age_months > 0.823731: Low (29.0)
+|   |   |   |   |   |   season = Winter: High (0.0)
+|   |   |   |   |   month > 0.102757
+|   |   |   |   |   |   plant_age_months <= 1.551403
+|   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   plant_age_months <= 1.337382
+|   |   |   |   |   |   |   |   |   plant_age_months <= 1.123361
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.700998: Medium (86.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.700998
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.875261: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.875261: Medium (11.0/2.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 1.123361: High (24.0/9.0)
+|   |   |   |   |   |   |   |   plant_age_months > 1.337382
+|   |   |   |   |   |   |   |   |   plant_age_months <= 1.465795
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 1.422991: Medium (32.0/8.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 1.422991: Low (16.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 1.465795: Medium (69.0/3.0)
+|   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   plant_age_months <= 1.294578: High (117.0/13.0)
+|   |   |   |   |   |   |   |   plant_age_months > 1.294578
+|   |   |   |   |   |   |   |   |   plant_age_months <= 1.508599: Medium (118.0/40.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 1.508599: High (18.0/7.0)
+|   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   plant_age_months > 1.551403: High (183.0/53.0)
+|   |   |   NOAAClimRegion = Southeast
+|   |   |   |   month <= -0.449584
+|   |   |   |   |   total_daily_snow_mm <= -0.086398
+|   |   |   |   |   |   plant_age_months <= 0.310079: Medium (418.0/92.0)
+|   |   |   |   |   |   plant_age_months > 0.310079
+|   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   plant_age_months <= 0.609709
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.059665: High (103.0/46.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.059665
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.135825: Medium (37.0/11.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.135825: High (29.0/12.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.609709: Medium (97.0/45.0)
+|   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   TempZone = T6: Medium (48.0/11.0)
+|   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   total_daily_snow_mm > -0.086398
+|   |   |   |   |   |   plant_age_months <= 0.609709: Low (44.0/4.0)
+|   |   |   |   |   |   plant_age_months > 0.609709
+|   |   |   |   |   |   |   plant_age_months <= 1.637012: Medium (35.0/7.0)
+|   |   |   |   |   |   |   plant_age_months > 1.637012: Low (7.0)
+|   |   |   |   month > -0.449584
+|   |   |   |   |   plant_age_months <= 1.508599
+|   |   |   |   |   |   plant_age_months <= 0.652514
+|   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   plant_age_months <= 0.267275
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.010449
+|   |   |   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.760028
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.081282: Low (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.081282: Medium (20.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.760028
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.503202: Low (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.503202: Medium (23.0/7.0)
+|   |   |   |   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.845636
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= -0.086398
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.828131: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.828131
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.634964: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.634964
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.461758: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.461758: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > -0.086398: Medium (23.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.845636: Medium (225.0/40.0)
+|   |   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.010449
+|   |   |   |   |   |   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.224471: Medium (24.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.224471
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.725242: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.725242: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   month > -0.173413: Low (22.0/7.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.267275: Medium (615.0/85.0)
+|   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   total_daily_snow_mm <= -0.086398
+|   |   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   |   season = Autumn: Medium (18.0/3.0)
+|   |   |   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.570295: Low (61.0/22.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.570295: Medium (19.0/3.0)
+|   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   total_daily_snow_mm > -0.086398
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.155689: Medium (51.0/3.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -1.155689
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964: High (3.0)
+|   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   plant_age_months > 0.652514
+|   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.780926
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.990347: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.990347: Low (47.0/6.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.780926: Medium (105.0/38.0)
+|   |   |   |   |   |   |   |   season = Summer: Medium (494.0/155.0)
+|   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   season = Autumn: Medium (22.0/2.0)
+|   |   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.695191: Low (33.0/8.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.695191: Medium (37.0/12.0)
+|   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   plant_age_months > 1.508599: Low (49.0)
+|   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   plant_age_months <= 1.037752
+|   |   |   |   |   plant_age_months <= 0.823731: Medium (12.0/5.0)
+|   |   |   |   |   plant_age_months > 0.823731: High (8.0/3.0)
+|   |   |   |   plant_age_months > 1.037752
+|   |   |   |   |   plant_age_months <= 1.251773: Medium (4.0)
+|   |   |   |   |   plant_age_months > 1.251773
+|   |   |   |   |   |   plant_age_months <= 1.294578: Low (52.0/27.0)
+|   |   |   |   |   |   plant_age_months > 1.294578: Medium (35.0/15.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   plant_age_months <= 2.150663
+|   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   wind_speed_mean <= -1.034443: Medium (10.0/3.0)
+|   |   |   |   |   |   wind_speed_mean > -1.034443: High (88.0/21.0)
+|   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   plant_age_months <= -1.316484
+|   |   |   |   |   |   |   wind_speed_mean <= -0.882904: Low (3.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.882904: Medium (56.0/5.0)
+|   |   |   |   |   |   plant_age_months > -1.316484
+|   |   |   |   |   |   |   plant_age_months <= 1.551403
+|   |   |   |   |   |   |   |   wind_speed_mean <= -1.253527
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.374789: Low (13.0/5.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.374789: High (16.0/1.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -1.253527
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.204236
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.246376: Medium (270.0/86.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.246376
+|   |   |   |   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.203572: Medium (23.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.203572: High (23.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Summer: Medium (27.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.204236: High (14.0/2.0)
+|   |   |   |   |   |   |   plant_age_months > 1.551403
+|   |   |   |   |   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   |   |   |   |   season = Autumn: Low (15.0/6.0)
+|   |   |   |   |   |   |   |   season = Summer: Medium (25.0/10.0)
+|   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   TempZone = T6: Medium (0.0)
+|   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   plant_age_months > 2.150663: High (77.0/3.0)
+|   |   |   NOAAClimRegion = South
+|   |   |   |   month <= -0.725754: Medium (30.0/5.0)
+|   |   |   |   month > -0.725754
+|   |   |   |   |   plant_age_months <= -1.316484
+|   |   |   |   |   |   wind_speed_mean <= -0.268831: Low (57.0/31.0)
+|   |   |   |   |   |   wind_speed_mean > -0.268831
+|   |   |   |   |   |   |   wind_speed_mean <= -0.0347: Low (11.0/3.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.0347: Medium (14.0/3.0)
+|   |   |   |   |   plant_age_months > -1.316484
+|   |   |   |   |   |   plant_age_months <= -0.888441
+|   |   |   |   |   |   |   wind_speed_mean <= 0.065269
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.911389: Low (4.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.911389: Medium (97.0/24.0)
+|   |   |   |   |   |   |   wind_speed_mean > 0.065269: Low (14.0/3.0)
+|   |   |   |   |   |   plant_age_months > -0.888441
+|   |   |   |   |   |   |   month <= -0.173413: Medium (10.0/3.0)
+|   |   |   |   |   |   |   month > -0.173413
+|   |   |   |   |   |   |   |   plant_age_months <= -0.845636: Low (35.0/7.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.845636
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.682318: Low (3.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.682318: Medium (9.0/2.0)
+|   |   |   NOAAClimRegion = Southwest
+|   |   |   |   plant_age_months <= 1.594208: Medium (213.0/17.0)
+|   |   |   |   plant_age_months > 1.594208
+|   |   |   |   |   month <= 0.102757
+|   |   |   |   |   |   month <= -0.173413: Medium (2.0)
+|   |   |   |   |   |   month > -0.173413: Low (26.0/8.0)
+|   |   |   |   |   month > 0.102757: Medium (49.0/5.0)
+|   |   month > 0.655098
+|   |   |   cumulative_snow_mm <= -0.044205
+|   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   season = Autumn
+|   |   |   |   |   plant_age_months <= 0.952143
+|   |   |   |   |   |   NOAAClimRegion = Northwest: High (15.0/3.0)
+|   |   |   |   |   |   NOAAClimRegion = Upper Midwest: High (22.0/3.0)
+|   |   |   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   |   |   plant_age_months <= 0.566905
+|   |   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   |   plant_age_months <= -1.402092
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.573309: High (28.0/13.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.573309
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.102328: Low (15.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.102328: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -1.402092
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.310079
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.203572: Medium (608.0/107.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.203572
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.075159: Medium (60.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.075159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.267275
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.532985: Medium (75.0/30.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.532985: High (13.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.267275: High (13.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.053254: High (26.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.053254: Medium (27.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.310079
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.449681
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.352884
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.323439: Medium (41.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.323439: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.352884
+|   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T5: Medium (87.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.248729: Medium (43.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.248729
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.188049: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.188049
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.223203: Medium (53.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.223203
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.334415: Low (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.334415: Medium (15.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.449681
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T5: Medium (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.613685: High (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.613685
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.438492
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.967459
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.439163: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.439163: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.967459: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.438492: Medium (34.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.63417
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.032355
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.417594
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.359288: High (19.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.359288
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.027744: Medium (90.0/20.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.027744: High (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T6: Medium (224.0/62.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.417594
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.289181: Low (18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.289181
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.426313
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T5: Low (18.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.067577: Low (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.067577: Medium (12.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.426313
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.201254: Medium (17.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.201254
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.203572: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.203572: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768: Medium (33.0/17.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964: Low (20.0/3.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.032355
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.352884
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.224471: Medium (43.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.224471: High (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.352884
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.847721
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.087393: Medium (21.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.087393: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.847721: Medium (78.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.352884: Medium (25.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.352884
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.584791: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.584791: High (16.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.395688: High (67.0/29.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.63417
+|   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.075159
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.546006: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.546006
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.289181: Medium (19.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.289181
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.286271: Medium (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.286271: High (10.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.075159: High (37.0/10.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.188071: Medium (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.188071
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.374789
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.674419
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.760028: High (18.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.760028: Medium (11.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.674419: High (29.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.374789
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.246376: Low (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.246376: High (19.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.395688
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 2.314973
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 2.185659: High (16.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 2.185659: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 2.314973: High (3.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   plant_age_months > 0.566905
+|   |   |   |   |   |   |   |   wind_speed_mean <= -1.051133: Medium (48.0/9.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -1.051133
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.738122
+|   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.083767: Medium (41.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.083767: High (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T6: High (72.0/22.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.738122: High (133.0/55.0)
+|   |   |   |   |   |   NOAAClimRegion = Southeast
+|   |   |   |   |   |   |   plant_age_months <= 0.566905
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.138862
+|   |   |   |   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.897902: Medium (14.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.897902: High (25.0/7.0)
+|   |   |   |   |   |   |   |   |   |   month > 0.931269: High (30.0/4.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.138862
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688: Low (21.0/10.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.395688
+|   |   |   |   |   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.713399: Medium (75.0/14.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.713399
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.524101
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.481296: High (19.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.481296: Medium (29.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.524101: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.524101: High (53.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.524101: Medium (46.0/20.0)
+|   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   TempZone = T6: Medium (31.0/3.0)
+|   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   plant_age_months > 0.566905
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.823731
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.767499: Low (27.0/11.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.767499: Medium (19.0/3.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.823731: Medium (194.0/32.0)
+|   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   TempZone = T6: Medium (34.0/1.0)
+|   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Ohio Valley: Medium (17.0/8.0)
+|   |   |   |   |   |   NOAAClimRegion = Northeast
+|   |   |   |   |   |   |   plant_age_months <= -0.203572
+|   |   |   |   |   |   |   |   month <= 0.931269: Medium (92.0/42.0)
+|   |   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.331985: Medium (10.0/3.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.331985
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 1.464949: High (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 1.464949: Medium (4.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > -0.203572: High (143.0/40.0)
+|   |   |   |   |   |   NOAAClimRegion = South: Medium (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southwest: High (41.0/11.0)
+|   |   |   |   |   plant_age_months > 0.952143
+|   |   |   |   |   |   plant_age_months <= 1.422991
+|   |   |   |   |   |   |   wind_speed_mean <= -1.01704: Medium (9.0/2.0)
+|   |   |   |   |   |   |   wind_speed_mean > -1.01704: High (158.0/38.0)
+|   |   |   |   |   |   plant_age_months > 1.422991
+|   |   |   |   |   |   |   plant_age_months <= 1.551403
+|   |   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   |   plant_age_months <= 1.508599: Low (36.0/13.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 1.508599: High (48.0/24.0)
+|   |   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   |   plant_age_months <= 1.508599: High (25.0/13.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 1.508599: Low (14.0)
+|   |   |   |   |   |   |   plant_age_months > 1.551403
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = Northwest: High (0.0)
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = Upper Midwest: High (0.0)
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 2.150663
+|   |   |   |   |   |   |   |   |   |   |   month <= 0.931269: High (90.0/35.0)
+|   |   |   |   |   |   |   |   |   |   |   month > 0.931269: Medium (128.0/40.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 2.150663: High (15.0)
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = Southeast: High (0.0)
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = Ohio Valley: High (0.0)
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = Northeast: High (31.0/3.0)
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   |   |   |   |   |   |   NOAAClimRegion = Southwest: High (0.0)
+|   |   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   |   plant_age_months <= 2.193468: Medium (21.0/9.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 2.193468
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = Northwest: High (0.0)
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = Upper Midwest: High (0.0)
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 3.220771
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 3.006749: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 3.006749: Low (20.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 3.220771: High (6.0)
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = Southeast: High (0.0)
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = Ohio Valley: High (0.0)
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = Northeast: High (32.0)
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   |   |   |   |   |   |   |   NOAAClimRegion = Southwest: High (0.0)
+|   |   |   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   season = Winter
+|   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   NOAAClimRegion = Northwest: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Upper Midwest: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   |   |   plant_age_months <= 0.823731
+|   |   |   |   |   |   |   |   plant_age_months <= 0.096058: High (164.0/19.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.096058
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.224471: Medium (48.0/13.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.224471
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688: High (23.0/2.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.395688
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.566905: Medium (101.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.566905
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.695318: High (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.695318
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.249155: Medium (25.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.249155: High (5.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > 0.823731
+|   |   |   |   |   |   |   |   plant_age_months <= 1.594208
+|   |   |   |   |   |   |   |   |   plant_age_months <= 1.508599
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.994948
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.028137: High (49.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.028137
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.258704
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.909339: Medium (15.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.909339: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.258704: High (3.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.994948: High (28.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 1.508599
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.260754: Low (24.0/6.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.260754: High (5.0)
+|   |   |   |   |   |   |   |   plant_age_months > 1.594208
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.275885
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 1.722621
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 1.679816: Medium (41.0/19.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 1.679816: High (13.0/3.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 1.722621: Medium (40.0/13.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.275885
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.253919: High (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.253919: Medium (8.0/2.0)
+|   |   |   |   |   |   NOAAClimRegion = Southeast
+|   |   |   |   |   |   |   plant_age_months <= 0.566905
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.239359: High (47.0/7.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > -0.239359
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.76726: Medium (4.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.76726: High (5.0/2.0)
+|   |   |   |   |   |   |   plant_age_months > 0.566905: Medium (86.0/17.0)
+|   |   |   |   |   |   NOAAClimRegion = Ohio Valley: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Northeast: Medium (21.0/2.0)
+|   |   |   |   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southwest: High (0.0)
+|   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   cumulative_snow_mm <= -0.216935
+|   |   |   |   |   |   |   NOAAClimRegion = Northwest: Medium (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Upper Midwest: Medium (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   |   |   |   plant_age_months <= 3.263575: Medium (12.0/5.0)
+|   |   |   |   |   |   |   |   plant_age_months > 3.263575: High (2.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Southeast: Medium (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Ohio Valley: Medium (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Northeast: High (9.0/3.0)
+|   |   |   |   |   |   |   NOAAClimRegion = South: Medium (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Southwest: Medium (0.0)
+|   |   |   |   |   |   cumulative_snow_mm > -0.216935: Medium (19.0/3.0)
+|   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   plant_age_months <= -0.203572
+|   |   |   |   |   |   |   plant_age_months <= -0.374789
+|   |   |   |   |   |   |   |   plant_age_months <= -0.631615
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.717224: High (82.0/12.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.717224
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.592804: Low (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.592804: High (41.0/18.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.631615
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.546006: High (67.0/11.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.546006
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.460398: Medium (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.460398: High (22.0/2.0)
+|   |   |   |   |   |   |   plant_age_months > -0.374789: Low (22.0)
+|   |   |   |   |   |   plant_age_months > -0.203572
+|   |   |   |   |   |   |   NOAAClimRegion = Northwest: High (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Upper Midwest: High (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.512758: High (9.0/2.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.512758: Medium (3.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.117964: High (213.0/24.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Southeast: Medium (6.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Ohio Valley: High (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Northeast: High (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   |   |   |   |   NOAAClimRegion = Southwest: High (10.0)
+|   |   |   |   |   TempZone = T1: Low (10.0/2.0)
+|   |   |   cumulative_snow_mm > -0.044205
+|   |   |   |   plant_age_months <= 0.909339
+|   |   |   |   |   total_daily_snow_mm <= 1.80376
+|   |   |   |   |   |   NOAAClimRegion = Northwest: High (43.0/2.0)
+|   |   |   |   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   |   |   |   season = Spring: Low (0.0)
+|   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   plant_age_months <= -0.845636
+|   |   |   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.273679
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.444896: High (31.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.444896: Low (23.0/7.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.273679
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.145266
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.230875: High (24.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.230875
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.949311: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.949311: Medium (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.145266: High (13.0)
+|   |   |   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.230875
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.621536
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.818219: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.818219: High (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.621536: Low (24.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -1.230875
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.188071: High (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.188071
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= -0.051681: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > -0.051681: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.845636
+|   |   |   |   |   |   |   |   |   snow_value_mm <= -0.062004
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.584802: High (16.0/4.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.584802: Low (44.0/9.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > -0.062004
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.460398: Low (8.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.460398
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.203572: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.203572: Low (6.0)
+|   |   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   |   season = Winter: Low (58.0/11.0)
+|   |   |   |   |   |   NOAAClimRegion = West: High (16.0/5.0)
+|   |   |   |   |   |   NOAAClimRegion = Southeast
+|   |   |   |   |   |   |   total_daily_snow_mm <= -0.086398
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.864061: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.864061: Low (14.0)
+|   |   |   |   |   |   |   |   TempZone = T4: Low (0.0)
+|   |   |   |   |   |   |   |   TempZone = T6: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > -0.086398
+|   |   |   |   |   |   |   |   month <= 0.931269: Low (25.0/12.0)
+|   |   |   |   |   |   |   |   month > 0.931269: High (26.0/6.0)
+|   |   |   |   |   |   NOAAClimRegion = Ohio Valley: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Northeast
+|   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   wind_speed_mean <= -1.284553
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.013942: Medium (2.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.013942: Low (10.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -1.284553
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.246376
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.760028
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.230875
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.112661: High (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.112661
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.064279: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.064279: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.230875: Low (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.760028
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.833038
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.792345
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.761562
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.709079
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.024349: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.024349: High (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.709079: Medium (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.761562: High (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.792345: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.833038: High (7.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.246376
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.141362
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.118212
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.981103: Low (23.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.981103
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.00153: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.00153
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.397505: High (8.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.397505: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.118212: Low (9.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.141362
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.164867: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.164867: High (6.0)
+|   |   |   |   |   |   |   plant_age_months > -0.117964: High (56.0/6.0)
+|   |   |   |   |   |   NOAAClimRegion = South
+|   |   |   |   |   |   |   wind_speed_mean <= -0.010994
+|   |   |   |   |   |   |   |   plant_age_months <= -1.230875
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.360436: Medium (16.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.360436: High (3.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.230875: High (46.0/14.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.010994
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.025111: Low (10.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.025111: High (10.0/3.0)
+|   |   |   |   |   |   NOAAClimRegion = Southwest: High (0.0)
+|   |   |   |   |   total_daily_snow_mm > 1.80376: Low (27.0)
+|   |   |   |   plant_age_months > 0.909339
+|   |   |   |   |   total_daily_snow_mm <= 1.359128
+|   |   |   |   |   |   plant_age_months <= 1.893838
+|   |   |   |   |   |   |   cumulative_snow_mm <= 1.976194
+|   |   |   |   |   |   |   |   wind_speed_mean <= -1.042466: High (8.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -1.042466
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.022805
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 1.337382: Medium (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 1.337382
+|   |   |   |   |   |   |   |   |   |   |   season = Spring: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Autumn: High (23.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Winter: Medium (9.0/2.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.022805: Medium (97.0/23.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 1.976194: High (11.0/1.0)
+|   |   |   |   |   |   plant_age_months > 1.893838
+|   |   |   |   |   |   |   plant_age_months <= 2.193468: Low (6.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > 2.193468: High (16.0/1.0)
+|   |   |   |   |   total_daily_snow_mm > 1.359128: Low (7.0/1.0)
+low_irradiation > 0
+|   total_daily_snow_mm <= 0.006386
+|   |   cumulative_snow_mm <= -0.200411
+|   |   |   NOAAClimRegion = Northwest
+|   |   |   |   plant_age_months <= -0.631615: Medium (7.0/3.0)
+|   |   |   |   plant_age_months > -0.631615: High (35.0/9.0)
+|   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   month <= 0.102757
+|   |   |   |   |   plant_age_months <= -0.888441
+|   |   |   |   |   |   wind_speed_mean <= -0.48898
+|   |   |   |   |   |   |   wind_speed_mean <= -0.701384: Low (2.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.701384: Medium (2.0)
+|   |   |   |   |   |   wind_speed_mean > -0.48898: Low (6.0/2.0)
+|   |   |   |   |   plant_age_months > -0.888441: Medium (32.0/4.0)
+|   |   |   |   month > 0.102757
+|   |   |   |   |   plant_age_months <= -0.760028
+|   |   |   |   |   |   wind_speed_mean <= -0.185112: High (84.0/38.0)
+|   |   |   |   |   |   wind_speed_mean > -0.185112
+|   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.267234
+|   |   |   |   |   |   |   |   |   plant_age_months <= -1.359288: Medium (12.0/7.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -1.359288
+|   |   |   |   |   |   |   |   |   |   month <= 0.655098: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   month > 0.655098
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.14356: Low (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.14356: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > -0.267234: High (2.0)
+|   |   |   |   |   |   |   month > 0.931269: Low (4.0)
+|   |   |   |   |   plant_age_months > -0.760028
+|   |   |   |   |   |   plant_age_months <= -0.717224
+|   |   |   |   |   |   |   cumulative_snow_mm <= -0.286004
+|   |   |   |   |   |   |   |   month <= 0.655098
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.454708: Medium (4.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.454708: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   month > 0.655098: Low (11.0/3.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > -0.286004: Medium (6.0)
+|   |   |   |   |   |   plant_age_months > -0.717224
+|   |   |   |   |   |   |   wind_speed_mean <= -1.032546: Medium (2.0)
+|   |   |   |   |   |   |   wind_speed_mean > -1.032546
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.744174: High (6.0/1.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.744174: Medium (6.0/3.0)
+|   |   |   NOAAClimRegion = West
+|   |   |   |   season = Spring: High (260.0/74.0)
+|   |   |   |   season = Autumn
+|   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   plant_age_months <= -1.188071
+|   |   |   |   |   |   |   month <= 0.931269: Low (3.0)
+|   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   plant_age_months <= -1.359288: High (2.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.359288: Medium (12.0/1.0)
+|   |   |   |   |   |   plant_age_months > -1.188071
+|   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   plant_age_months <= 1.637012
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.22393: High (28.0/10.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.22393: Medium (2.0)
+|   |   |   |   |   |   |   |   plant_age_months > 1.637012: Medium (3.0)
+|   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.501742: Low (102.0/56.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.501742
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688: High (21.0/4.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.395688
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.566905: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.566905: High (5.0/2.0)
+|   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   plant_age_months <= 3.263575: Low (7.0/3.0)
+|   |   |   |   |   |   plant_age_months > 3.263575: High (7.0)
+|   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   month <= 0.931269: High (4.0/1.0)
+|   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   plant_age_months <= 0.352884
+|   |   |   |   |   |   |   |   plant_age_months <= -1.188071: High (5.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.188071: Medium (42.0/10.0)
+|   |   |   |   |   |   |   plant_age_months > 0.352884: High (8.0/2.0)
+|   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   season = Summer: Medium (6.0/2.0)
+|   |   |   |   season = Winter
+|   |   |   |   |   plant_age_months <= 0.524101
+|   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   plant_age_months <= 0.138862: High (486.0/179.0)
+|   |   |   |   |   |   |   plant_age_months > 0.138862
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.608119
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.798275
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.05166
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.438492: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.438492: High (11.0/4.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.05166: Low (3.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.798275: High (11.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.608119
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688
+|   |   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.181666: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.181666
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.310079
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.496716: Medium (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.496716: Low (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.310079: High (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   month > -1.554266: Medium (18.0/9.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.395688
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.101454
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.438492
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.370903
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.494494: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.494494: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.370903: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.438492: Medium (14.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.101454
+|   |   |   |   |   |   |   |   |   |   |   month <= -1.554266: Low (5.0)
+|   |   |   |   |   |   |   |   |   |   |   month > -1.554266: Medium (4.0/2.0)
+|   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   plant_age_months <= -0.331985: High (382.0/134.0)
+|   |   |   |   |   |   |   plant_age_months > -0.331985
+|   |   |   |   |   |   |   |   plant_age_months <= -0.075159
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.637607: Low (24.0/5.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.637607: High (4.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.075159: High (84.0/26.0)
+|   |   |   |   |   |   TempZone = T1
+|   |   |   |   |   |   |   month <= -0.173413: High (12.0/4.0)
+|   |   |   |   |   |   |   month > -0.173413: Low (3.0)
+|   |   |   |   |   plant_age_months > 0.524101
+|   |   |   |   |   |   TempZone = T5: High (319.0/128.0)
+|   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   |   |   plant_age_months <= 3.5204: Low (29.0/14.0)
+|   |   |   |   |   |   |   |   plant_age_months > 3.5204
+|   |   |   |   |   |   |   |   |   plant_age_months <= 3.563205: High (12.0/2.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 3.563205: Low (3.0/1.0)
+|   |   |   |   |   |   |   month > -0.173413: High (21.0/10.0)
+|   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   wind_speed_mean <= -0.76021: Medium (4.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.76021
+|   |   |   |   |   |   |   |   plant_age_months <= 0.652514
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.595081
+|   |   |   |   |   |   |   |   |   |   month <= -0.173413: High (3.0)
+|   |   |   |   |   |   |   |   |   |   month > -0.173413: Low (4.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.595081: High (22.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.652514
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.317425
+|   |   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.463757: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.463757: High (5.0)
+|   |   |   |   |   |   |   |   |   |   month > -1.554266: High (4.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.317425
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.608744
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.695318: Low (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.695318
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.094835: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.094835: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.608744
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.695318: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.695318: High (4.0)
+|   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   NOAAClimRegion = Southeast
+|   |   |   |   month <= 0.931269
+|   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   plant_age_months <= 0.780926: High (50.0/26.0)
+|   |   |   |   |   |   plant_age_months > 0.780926
+|   |   |   |   |   |   |   wind_speed_mean <= -0.28486
+|   |   |   |   |   |   |   |   plant_age_months <= 0.952143
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.531386: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.531386
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.499203: High (2.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.499203: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.952143
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.864946: Medium (11.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.864946: High (26.0/14.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.28486: Medium (32.0/13.0)
+|   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   month <= -1.278095
+|   |   |   |   |   |   |   wind_speed_mean <= -0.219541: Low (63.0/34.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.219541
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.13694: Low (35.0/5.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.13694: High (3.0)
+|   |   |   |   |   |   month > -1.278095
+|   |   |   |   |   |   |   wind_speed_mean <= 0.579815
+|   |   |   |   |   |   |   |   month <= -0.725754
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.566905
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.224015
+|   |   |   |   |   |   |   |   |   |   |   month <= -1.001925
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.197396: Low (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.197396: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   month > -1.001925: Low (33.0/17.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.224015: High (4.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.566905
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.381651
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.695318
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.609709
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.659795: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.659795: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.609709: Medium (6.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.695318
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.866535: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.866535
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.796701: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.796701
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.526896: Low (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.526896
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.456841
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.477857: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.477857: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.456841: Low (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.381651
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   |   month <= -1.001925
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.695318: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.695318
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.26049: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.26049
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.007732: Medium (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.007732: High (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   month > -1.001925
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.025617
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.052142: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.052142: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.025617: High (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T6: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   |   month > -0.725754
+|   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.780926
+|   |   |   |   |   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.481296
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.224471
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.782413: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.782413: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.224471: Medium (16.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.481296
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.609709
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.068493: High (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.068493: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.609709: Low (20.0/12.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   |   |   |   month <= 0.655098
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.438492
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.395688: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.438492
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.193021: Medium (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.193021: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   month > 0.655098: Medium (38.0/23.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   |   |   |   |   month <= 0.102757: Medium (34.0/16.0)
+|   |   |   |   |   |   |   |   |   |   |   |   month > 0.102757
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.395688: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.395688: Low (8.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   season = Winter: Medium (0.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.780926
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.608314: Medium (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.608314: Low (32.0/12.0)
+|   |   |   |   |   |   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.652514
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.481296: Medium (9.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > 0.481296: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.652514: Medium (10.0/2.0)
+|   |   |   |   |   |   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   |   |   |   |   wind_speed_mean > 0.579815: Low (13.0/1.0)
+|   |   |   |   month > 0.931269
+|   |   |   |   |   plant_age_months <= 0.481296
+|   |   |   |   |   |   plant_age_months <= 0.438492
+|   |   |   |   |   |   |   season = Spring: Low (0.0)
+|   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   plant_age_months <= 0.138862
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.404135: Low (6.0/2.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.404135
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.417594: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.417594: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.138862: Medium (7.0/2.0)
+|   |   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.73637: High (8.0/2.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.73637
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.186059: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.186059: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.117964: Low (2.0)
+|   |   |   |   |   |   plant_age_months > 0.438492: High (14.0/4.0)
+|   |   |   |   |   plant_age_months > 0.481296: Low (235.0/100.0)
+|   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   plant_age_months <= 1.080556: Low (15.0/7.0)
+|   |   |   |   plant_age_months > 1.080556: High (55.0/27.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   month <= 0.931269
+|   |   |   |   |   season = Spring: High (0.0)
+|   |   |   |   |   season = Autumn
+|   |   |   |   |   |   plant_age_months <= -0.203572
+|   |   |   |   |   |   |   month <= 0.655098
+|   |   |   |   |   |   |   |   plant_age_months <= -0.460398: Medium (8.0/4.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.460398
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.331985: High (47.0/24.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.331985
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.342055
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.294852: Low (6.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.294852: High (29.0/17.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.342055: Medium (9.0/1.0)
+|   |   |   |   |   |   |   month > 0.655098
+|   |   |   |   |   |   |   |   plant_age_months <= -0.289181
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.539739: Low (29.0/15.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.539739: High (15.0/7.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.289181: Low (48.0/27.0)
+|   |   |   |   |   |   plant_age_months > -0.203572
+|   |   |   |   |   |   |   plant_age_months <= 1.765425
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.738122
+|   |   |   |   |   |   |   |   |   |   month <= 0.655098
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.102339: Medium (17.0/9.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.102339: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   month > 0.655098: Low (10.0/3.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.738122: High (44.0/17.0)
+|   |   |   |   |   |   |   |   TempZone = T4: High (72.0/25.0)
+|   |   |   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   plant_age_months > 1.765425
+|   |   |   |   |   |   |   |   plant_age_months <= 2.493098: Low (28.0/6.0)
+|   |   |   |   |   |   |   |   plant_age_months > 2.493098: High (32.0/10.0)
+|   |   |   |   |   season = Summer: Low (13.0/4.0)
+|   |   |   |   |   season = Winter: High (11.0/6.0)
+|   |   |   |   month > 0.931269
+|   |   |   |   |   wind_speed_mean <= 0.97026: Low (115.0/47.0)
+|   |   |   |   |   wind_speed_mean > 0.97026: High (6.0/2.0)
+|   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   NOAAClimRegion = Southwest
+|   |   |   |   season = Spring: High (11.0/5.0)
+|   |   |   |   season = Autumn
+|   |   |   |   |   wind_speed_mean <= 0.770941: Medium (7.0/2.0)
+|   |   |   |   |   wind_speed_mean > 0.770941: High (3.0)
+|   |   |   |   season = Summer: Medium (1.0)
+|   |   |   |   season = Winter
+|   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   wind_speed_mean <= 0.183127
+|   |   |   |   |   |   |   wind_speed_mean <= -0.099679: High (3.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.099679: Medium (5.0/1.0)
+|   |   |   |   |   |   wind_speed_mean > 0.183127: High (14.0/3.0)
+|   |   |   |   |   month > -0.173413: High (11.0/1.0)
+|   |   cumulative_snow_mm > -0.200411
+|   |   |   NOAAClimRegion = Northwest: High (408.0/160.0)
+|   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   plant_age_months <= -0.460398
+|   |   |   |   |   season = Spring: Low (255.0/102.0)
+|   |   |   |   |   season = Autumn
+|   |   |   |   |   |   plant_age_months <= -0.845636
+|   |   |   |   |   |   |   month <= 0.655098
+|   |   |   |   |   |   |   |   plant_age_months <= -1.316484
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.766437: Medium (4.0/2.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.766437: Low (39.0/6.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.316484
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.093912
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.734343
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.955206
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -1.188071
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.039687: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.039687: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -1.188071: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.955206: Low (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.734343
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.888441: High (14.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.888441
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.62479: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.62479
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.317724: High (7.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.317724: Medium (7.0/3.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.093912: Low (36.0/15.0)
+|   |   |   |   |   |   |   month > 0.655098: Low (259.0/104.0)
+|   |   |   |   |   |   plant_age_months > -0.845636
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.090913
+|   |   |   |   |   |   |   |   month <= 0.655098: Low (31.0/2.0)
+|   |   |   |   |   |   |   |   month > 0.655098
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.802832
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.210762: High (20.0/6.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.210762: Low (36.0/13.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.802832: Low (131.0/33.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.090913: High (8.0/3.0)
+|   |   |   |   |   season = Summer
+|   |   |   |   |   |   plant_age_months <= -1.359288: Low (106.0/44.0)
+|   |   |   |   |   |   plant_age_months > -1.359288
+|   |   |   |   |   |   |   plant_age_months <= -1.102462: Medium (24.0/8.0)
+|   |   |   |   |   |   |   plant_age_months > -1.102462: Low (100.0/41.0)
+|   |   |   |   |   season = Winter: Low (553.0/139.0)
+|   |   |   |   plant_age_months > -0.460398
+|   |   |   |   |   wind_speed_mean <= -1.242405
+|   |   |   |   |   |   plant_age_months <= -0.246376: Low (48.0)
+|   |   |   |   |   |   plant_age_months > -0.246376
+|   |   |   |   |   |   |   season = Spring: Low (0.0)
+|   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   wind_speed_mean <= -1.298518
+|   |   |   |   |   |   |   |   |   month <= 0.655098: Medium (4.0/2.0)
+|   |   |   |   |   |   |   |   |   month > 0.655098: Low (21.0/6.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -1.298518: Medium (6.0/2.0)
+|   |   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   |   season = Winter: Low (37.0/11.0)
+|   |   |   |   |   wind_speed_mean > -1.242405
+|   |   |   |   |   |   plant_age_months <= -0.246376: Medium (94.0/33.0)
+|   |   |   |   |   |   plant_age_months > -0.246376
+|   |   |   |   |   |   |   plant_age_months <= -0.075159
+|   |   |   |   |   |   |   |   season = Spring: High (0.0)
+|   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.203572
+|   |   |   |   |   |   |   |   |   |   |   month <= 0.655098: High (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   month > 0.655098
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.513165
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.911572: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.911572: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.513165
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.397604
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.403131: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.403131: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.397604: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.203572
+|   |   |   |   |   |   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.692642: High (9.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.692642: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.801778: Low (6.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.801778: High (4.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.160768: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > -0.117964
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.107766
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.185385: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.185385: High (2.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.107766: Low (7.0/2.0)
+|   |   |   |   |   |   |   plant_age_months > -0.075159: High (24.0/5.0)
+|   |   |   NOAAClimRegion = West
+|   |   |   |   wind_speed_mean <= 0.145011
+|   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   plant_age_months <= -1.616114
+|   |   |   |   |   |   |   wind_speed_mean <= -0.47842: Low (3.0/1.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.47842: High (3.0/1.0)
+|   |   |   |   |   |   plant_age_months > -1.616114: Medium (3.0)
+|   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   month <= -1.001925: High (43.0/6.0)
+|   |   |   |   |   |   month > -1.001925
+|   |   |   |   |   |   |   plant_age_months <= 1.722621: High (5.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > 1.722621: Medium (6.0/2.0)
+|   |   |   |   wind_speed_mean > 0.145011
+|   |   |   |   |   wind_speed_mean <= 0.626661: Low (2.0)
+|   |   |   |   |   wind_speed_mean > 0.626661: Medium (3.0)
+|   |   |   NOAAClimRegion = Southeast
+|   |   |   |   month <= 1.207439
+|   |   |   |   |   plant_age_months <= 1.123361
+|   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   total_daily_snow_mm <= -0.086398
+|   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.174666: Low (18.0/6.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.174666: High (3.0/1.0)
+|   |   |   |   |   |   |   |   TempZone = T4: Low (0.0)
+|   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   plant_age_months <= 0.695318: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   plant_age_months > 0.695318
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.248409: High (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.248409: Low (3.0)
+|   |   |   |   |   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > -0.086398
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.882326: High (5.0/2.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.882326: Low (3.0)
+|   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   plant_age_months <= -0.717224: Medium (4.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > -0.717224
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.732031
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.195839: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -1.195839: High (6.0/2.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.732031: Low (6.0/1.0)
+|   |   |   |   |   |   season = Summer: Low (2.0/1.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   total_daily_snow_mm <= -0.086398
+|   |   |   |   |   |   |   |   plant_age_months <= 0.609709: Low (19.0/6.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.609709
+|   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.266249: High (10.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.266249: Medium (5.0/3.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.033391
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.524114: Medium (8.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.524114: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.033391: Medium (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.735257
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.113505: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.113505: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T6: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.735257
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T5: Low (15.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T4: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.157191
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.644878: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.644878: Low (12.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.157191: High (2.0)
+|   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > -0.086398
+|   |   |   |   |   |   |   |   plant_age_months <= -0.588811
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.203664
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.283457: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.283457: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -1.203664
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.905093: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.905093: Medium (2.0)
+|   |   |   |   |   |   |   |   plant_age_months > -0.588811: High (14.0/8.0)
+|   |   |   |   |   plant_age_months > 1.123361
+|   |   |   |   |   |   plant_age_months <= 1.337382: Medium (5.0)
+|   |   |   |   |   |   plant_age_months > 1.337382: Low (32.0/17.0)
+|   |   |   |   month > 1.207439
+|   |   |   |   |   wind_speed_mean <= -0.713304
+|   |   |   |   |   |   cumulative_snow_mm <= 0.868266: High (23.0/10.0)
+|   |   |   |   |   |   cumulative_snow_mm > 0.868266
+|   |   |   |   |   |   |   wind_speed_mean <= -0.858556
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.927253: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.927253: Low (5.0/1.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.858556: High (3.0/1.0)
+|   |   |   |   |   wind_speed_mean > -0.713304: Low (14.0/2.0)
+|   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   cumulative_snow_mm <= 9.533843
+|   |   |   |   |   cumulative_snow_mm <= 0.36383
+|   |   |   |   |   |   total_daily_snow_mm <= -0.167473
+|   |   |   |   |   |   |   plant_age_months <= 1.166165: Low (4.0/2.0)
+|   |   |   |   |   |   |   plant_age_months > 1.166165: Medium (8.0/3.0)
+|   |   |   |   |   |   total_daily_snow_mm > -0.167473: Low (2.0)
+|   |   |   |   |   cumulative_snow_mm > 0.36383
+|   |   |   |   |   |   season = Spring: Low (28.0/13.0)
+|   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   plant_age_months <= 1.380186: Medium (2.0)
+|   |   |   |   |   |   |   plant_age_months > 1.380186: High (7.0/2.0)
+|   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   cumulative_snow_mm <= 5.454262: Low (56.0/25.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 5.454262: High (16.0/6.0)
+|   |   |   |   cumulative_snow_mm > 9.533843
+|   |   |   |   |   cumulative_snow_mm <= 9.610185: High (5.0/1.0)
+|   |   |   |   |   cumulative_snow_mm > 9.610185: Medium (3.0/1.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   plant_age_months <= 0.010449
+|   |   |   |   |   plant_age_months <= -1.102462
+|   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   season = Spring: Low (0.0)
+|   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   plant_age_months <= -1.230875
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.242494
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.775243: Medium (9.0/3.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.775243: Low (13.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.242494
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.410669: Medium (12.0/4.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.410669: Low (2.0)
+|   |   |   |   |   |   |   |   plant_age_months > -1.230875
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.437827: Medium (6.0/2.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.437827: Low (2.0)
+|   |   |   |   |   |   |   season = Summer: Medium (19.0/6.0)
+|   |   |   |   |   |   |   season = Winter: Low (21.0/7.0)
+|   |   |   |   |   |   month > 0.931269: Low (81.0/23.0)
+|   |   |   |   |   plant_age_months > -1.102462
+|   |   |   |   |   |   wind_speed_mean <= 1.508543
+|   |   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   |   snow_value_mm <= 1.619361
+|   |   |   |   |   |   |   |   |   snow_value_mm <= -0.062004
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.243073
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.992823: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.992823: High (14.0/6.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.243073
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964: Medium (22.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.304072: Low (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.304072: Medium (2.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > -0.062004: Low (54.0/34.0)
+|   |   |   |   |   |   |   |   snow_value_mm > 1.619361: Medium (4.0/1.0)
+|   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.927129
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.28116
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.112525: High (9.0/4.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.112525: Low (7.0/2.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.28116
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.289181
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.339987: High (8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.339987
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.845195: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.845195: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.289181
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.748988: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.748988: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.921671: High (7.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.921671
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.248212: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.248212: High (3.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 0.927129: Low (13.0/2.0)
+|   |   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.395411: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.395411: High (2.0)
+|   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 2.623045
+|   |   |   |   |   |   |   |   |   snow_value_mm <= -0.026418
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.160768
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.246376: Low (43.0/19.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.246376: Medium (45.0/20.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > -0.160768
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964: Low (31.0/7.0)
+|   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.032355: Medium (18.0/8.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.032355: Low (17.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= -0.127709
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.075159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.562518: Low (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.562518: High (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month > -0.173413
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.080736: High (7.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.080736: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.075159
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.076968
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.121516: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.121516
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.195839: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.195839: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.076968
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.30412
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.826201: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.826201: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   month > -0.173413
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.122273
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.503289: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.503289: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.122273: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.30412
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.065942: Medium (5.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -0.065942: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > -0.127709: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T6: Low (0.0)
+|   |   |   |   |   |   |   |   |   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > -0.026418
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.017696: High (21.0/9.0)
+|   |   |   |   |   |   |   |   |   |   wind_speed_mean > 0.017696
+|   |   |   |   |   |   |   |   |   |   |   month <= -1.554266: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   month > -1.554266: Medium (5.0/2.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 2.623045: Low (43.0/9.0)
+|   |   |   |   |   |   wind_speed_mean > 1.508543
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.408311: Low (3.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.408311: High (13.0/2.0)
+|   |   |   |   plant_age_months > 0.010449
+|   |   |   |   |   cumulative_snow_mm <= -0.052816: Low (42.0/16.0)
+|   |   |   |   |   cumulative_snow_mm > -0.052816
+|   |   |   |   |   |   plant_age_months <= 2.193468
+|   |   |   |   |   |   |   plant_age_months <= 1.851033
+|   |   |   |   |   |   |   |   plant_age_months <= 0.053254: Low (17.0/5.0)
+|   |   |   |   |   |   |   |   plant_age_months > 0.053254
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.195839: Low (3.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -1.195839: High (92.0/38.0)
+|   |   |   |   |   |   |   plant_age_months > 1.851033: Low (54.0/6.0)
+|   |   |   |   |   |   plant_age_months > 2.193468
+|   |   |   |   |   |   |   season = Spring: Low (8.0/3.0)
+|   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.28116: High (5.0/1.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 0.28116: Low (3.0)
+|   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   plant_age_months <= 2.749923
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.676053
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.134825: High (23.0/7.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.134825: Low (3.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.676053: High (25.0/3.0)
+|   |   |   |   |   |   |   |   plant_age_months > 2.749923: Low (4.0/1.0)
+|   |   |   NOAAClimRegion = South
+|   |   |   |   month <= 1.207439
+|   |   |   |   |   wind_speed_mean <= -0.289348
+|   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   month <= -1.001925: Low (2.0)
+|   |   |   |   |   |   |   month > -1.001925: Medium (12.0/4.0)
+|   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   wind_speed_mean <= -0.432421
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.793837: Medium (7.0/3.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.793837: Low (23.0/8.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.432421: Medium (6.0)
+|   |   |   |   |   |   season = Summer: Medium (7.0/3.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   wind_speed_mean <= -0.725426: Medium (5.0/1.0)
+|   |   |   |   |   |   |   wind_speed_mean > -0.725426
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.452811: Low (7.0/1.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.452811: Medium (6.0/2.0)
+|   |   |   |   |   wind_speed_mean > -0.289348
+|   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   month <= -1.001925
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.132035: Low (5.0/2.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.132035: High (5.0/1.0)
+|   |   |   |   |   |   |   month > -1.001925
+|   |   |   |   |   |   |   |   wind_speed_mean <= 0.05199: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > 0.05199
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= 0.133149: Low (3.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > 0.133149
+|   |   |   |   |   |   |   |   |   |   month <= -0.725754: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   month > -0.725754: Low (3.0/1.0)
+|   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   plant_age_months <= -1.273679: Medium (2.0/1.0)
+|   |   |   |   |   |   |   plant_age_months > -1.273679: Low (19.0/6.0)
+|   |   |   |   |   |   season = Summer
+|   |   |   |   |   |   |   month <= -0.173413: Medium (2.0)
+|   |   |   |   |   |   |   month > -0.173413: Low (2.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   wind_speed_mean <= 0.031328: Low (10.0)
+|   |   |   |   |   |   |   wind_speed_mean > 0.031328
+|   |   |   |   |   |   |   |   month <= -1.554266: Low (6.0/2.0)
+|   |   |   |   |   |   |   |   month > -1.554266: High (8.0/3.0)
+|   |   |   |   month > 1.207439: Low (20.0/2.0)
+|   |   |   NOAAClimRegion = Southwest: Low (84.0/37.0)
+|   total_daily_snow_mm > 0.006386
+|   |   total_daily_snow_mm <= 2.006572
+|   |   |   NOAAClimRegion = Northwest
+|   |   |   |   month <= -1.554266: Low (2.0)
+|   |   |   |   month > -1.554266
+|   |   |   |   |   total_daily_snow_mm <= 1.013909
+|   |   |   |   |   |   total_daily_snow_mm <= 0.842522
+|   |   |   |   |   |   |   cumulative_snow_mm <= -0.239359: Medium (2.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > -0.239359: High (5.0/1.0)
+|   |   |   |   |   |   total_daily_snow_mm > 0.842522: Low (2.0)
+|   |   |   |   |   total_daily_snow_mm > 1.013909: High (7.0)
+|   |   |   NOAAClimRegion = Upper Midwest: Low (234.0/44.0)
+|   |   |   NOAAClimRegion = West: Low (0.0)
+|   |   |   NOAAClimRegion = Southeast: Low (1.0)
+|   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   plant_age_months <= 1.508599: Low (46.0/11.0)
+|   |   |   |   plant_age_months > 1.508599: High (3.0/1.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   wind_speed_mean <= 1.256549
+|   |   |   |   |   plant_age_months <= 2.664315
+|   |   |   |   |   |   season = Spring: Low (14.0/1.0)
+|   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.829331
+|   |   |   |   |   |   |   |   snow_value_mm <= 0.128969: High (2.0)
+|   |   |   |   |   |   |   |   snow_value_mm > 0.128969: Low (14.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.829331
+|   |   |   |   |   |   |   |   wind_speed_mean <= -0.133582: High (7.0)
+|   |   |   |   |   |   |   |   wind_speed_mean > -0.133582: Medium (5.0/1.0)
+|   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   plant_age_months <= 1.765425
+|   |   |   |   |   |   |   |   snow_value_mm <= 1.006989
+|   |   |   |   |   |   |   |   |   wind_speed_mean <= -0.815749
+|   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.869455
+|   |   |   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean <= -1.294852: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   wind_speed_mean > -1.294852: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   month > -1.554266: Low (18.0/4.0)
+|   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.869455
+|   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.539445: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 1.539445: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   wind_speed_mean > -0.815749
+|   |   |   |   |   |   |   |   |   |   plant_age_months <= 0.738122
+|   |   |   |   |   |   |   |   |   |   |   snow_value_mm <= -0.062004
+|   |   |   |   |   |   |   |   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months <= -0.117964: Low (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   plant_age_months > -0.117964
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.044585: Low (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 1.044585: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   month > -0.173413: Medium (4.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   snow_value_mm > -0.062004
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.446257: Low (12.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.446257: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   plant_age_months > 0.738122: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   snow_value_mm > 1.006989: High (4.0)
+|   |   |   |   |   |   |   plant_age_months > 1.765425: Low (7.0)
+|   |   |   |   |   plant_age_months > 2.664315
+|   |   |   |   |   |   plant_age_months <= 2.749923: High (7.0)
+|   |   |   |   |   |   plant_age_months > 2.749923: Low (2.0)
+|   |   |   |   wind_speed_mean > 1.256549: High (6.0)
+|   |   |   NOAAClimRegion = South: Low (0.0)
+|   |   |   NOAAClimRegion = Southwest
+|   |   |   |   snow_value_mm <= 0.488591
+|   |   |   |   |   month <= -1.554266: Low (2.0)
+|   |   |   |   |   month > -1.554266: Medium (3.0/1.0)
+|   |   |   |   snow_value_mm > 0.488591: Low (8.0/1.0)
+|   |   total_daily_snow_mm > 2.006572: Low (440.0/39.0)
+
+Number of Leaves  : 	1362
+
+Size of the tree : 	2439
+
+
+Time taken to build model: 0.73 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       25059               71.8496 %
+Incorrectly Classified Instances      9818               28.1504 %
+Kappa statistic                          0.5586
+Mean absolute error                      0.2458
+Root mean squared error                  0.3707
+Relative absolute error                 57.6361 %
+Root relative squared error             80.2837 %
+Total Number of Instances            34877     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.776    0.206    0.763      0.776    0.769      0.569    0.843     0.794     Medium
+                 0.637    0.099    0.660      0.637    0.648      0.545    0.855     0.668     Low
+                 0.695    0.137    0.694      0.695    0.694      0.558    0.854     0.717     High
+Weighted Avg.    0.718    0.160    0.718      0.718    0.718      0.560    0.849     0.741     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 12447  1435  2163 |     a = Medium
+  1805  5143  1132 |     b = Low
+  2071  1212  7469 |     c = High
+

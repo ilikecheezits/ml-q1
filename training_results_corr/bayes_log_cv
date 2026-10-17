@@ -1,0 +1,125 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     correlation_train
+Instances:    34877
+Attributes:   11
+              low_irradiation
+              NOAAClimRegion
+              total_daily_snow_mm
+              TempZone
+              season
+              cumulative_snow_mm
+              snow_value_mm
+              month
+              wind_speed_mean
+              plant_age_months
+              PR_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                        Class
+Attribute              Medium     Low    High
+                       (0.46)  (0.23)  (0.31)
+==============================================
+low_irradiation
+  mean                  0.1161  0.4731  0.2807
+  std. dev.             0.3204  0.4993  0.4493
+  weight sum             16045    8080   10752
+  precision                  1       1       1
+
+NOAAClimRegion
+  Northwest              607.0   114.0   481.0
+  Upper Midwest         1134.0  2994.0  1032.0
+  West                  9070.0  1905.0  6124.0
+  Southeast             3355.0  1284.0  1005.0
+  Ohio Valley            184.0   243.0   229.0
+  Northeast             1094.0  1194.0  1604.0
+  South                  267.0   215.0   116.0
+  Southwest              342.0   139.0   169.0
+  [total]              16053.0  8088.0 10760.0
+
+total_daily_snow_mm
+  mean                 -0.1322  0.4061 -0.1081
+  std. dev.             0.3401  1.9124  0.4014
+  weight sum             16045    8080   10752
+  precision             0.0122  0.0122  0.0122
+
+TempZone
+  T5                    8170.0  2507.0  5263.0
+  T4                    2578.0  4421.0  2811.0
+  T6                    5265.0  1130.0  2533.0
+  T1                      36.0    26.0   149.0
+  [total]              16049.0  8084.0 10756.0
+
+season
+  Spring                3604.0  1427.0  2598.0
+  Autumn                4898.0  2218.0  2703.0
+  Summer                5279.0  1637.0   781.0
+  Winter                2268.0  2802.0  4674.0
+  [total]              16049.0  8084.0 10756.0
+
+cumulative_snow_mm
+  mean                 -0.1392  0.2419  0.0211
+  std. dev.             0.7171  1.2893  1.0754
+  weight sum             16045    8080   10752
+  precision             0.0102  0.0102  0.0102
+
+snow_value_mm
+  mean                 -0.0921  0.2725 -0.0738
+  std. dev.             0.2176  1.9825  0.3829
+  weight sum             16045    8080   10752
+  precision             0.0377  0.0377  0.0377
+
+month
+  mean                 -0.0072  -0.083 -0.2602
+  std. dev.              0.828  1.0643  1.1536
+  weight sum             16045    8080   10752
+  precision             0.2762  0.2762  0.2762
+
+wind_speed_mean
+  mean                   0.109 -0.1683 -0.0362
+  std. dev.             1.0901  0.9316  0.8819
+  weight sum             16045    8080   10752
+  precision             0.0005  0.0005  0.0005
+
+plant_age_months
+  mean                 -0.0211 -0.2064  0.1853
+  std. dev.             0.8673  1.0733    1.09
+  weight sum             16045    8080   10752
+  precision             0.0453  0.0453  0.0453
+
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       18936               54.2937 %
+Incorrectly Classified Instances     15941               45.7063 %
+Kappa statistic                          0.219 
+Mean absolute error                      0.3105
+Root mean squared error                  0.4763
+Relative absolute error                 72.8079 %
+Root relative squared error            103.1437 %
+Total Number of Instances            34877     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.885    0.591    0.561      0.885    0.686      0.328    0.756     0.694     Medium
+                 0.142    0.020    0.679      0.142    0.234      0.239    0.739     0.509     Low
+                 0.335    0.177    0.457      0.335    0.387      0.174    0.702     0.454     High
+Weighted Avg.    0.543    0.331    0.556      0.543    0.489      0.260    0.736     0.577     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 14193   208  1644 |     a = Medium
+  4308  1144  2628 |     b = Low
+  6820   333  3599 |     c = High
+

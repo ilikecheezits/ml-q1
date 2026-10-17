@@ -1,0 +1,111 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     cfs_train
+Instances:    34877
+Attributes:   9
+              month
+              season
+              NOAAClimRegion
+              TempZone
+              total_daily_snow_mm
+              low_irradiation
+              cumulative_snow_mm
+              nearest_rain
+              PR_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                        Class
+Attribute              Medium     Low    High
+                       (0.46)  (0.23)  (0.31)
+==============================================
+month
+  mean                 -0.0072  -0.083 -0.2602
+  std. dev.              0.828  1.0643  1.1536
+  weight sum             16045    8080   10752
+  precision             0.2762  0.2762  0.2762
+
+season
+  Spring                3604.0  1427.0  2598.0
+  Autumn                4898.0  2218.0  2703.0
+  Summer                5279.0  1637.0   781.0
+  Winter                2268.0  2802.0  4674.0
+  [total]              16049.0  8084.0 10756.0
+
+NOAAClimRegion
+  Northwest              607.0   114.0   481.0
+  Upper Midwest         1134.0  2994.0  1032.0
+  West                  9070.0  1905.0  6124.0
+  Southeast             3355.0  1284.0  1005.0
+  Ohio Valley            184.0   243.0   229.0
+  Northeast             1094.0  1194.0  1604.0
+  South                  267.0   215.0   116.0
+  Southwest              342.0   139.0   169.0
+  [total]              16053.0  8088.0 10760.0
+
+TempZone
+  T5                    8170.0  2507.0  5263.0
+  T4                    2578.0  4421.0  2811.0
+  T6                    5265.0  1130.0  2533.0
+  T1                      36.0    26.0   149.0
+  [total]              16049.0  8084.0 10756.0
+
+total_daily_snow_mm
+  mean                 -0.1322  0.4061 -0.1081
+  std. dev.             0.3401  1.9124  0.4014
+  weight sum             16045    8080   10752
+  precision             0.0122  0.0122  0.0122
+
+low_irradiation
+  mean                  0.1161  0.4731  0.2807
+  std. dev.             0.3204  0.4993  0.4493
+  weight sum             16045    8080   10752
+  precision                  1       1       1
+
+cumulative_snow_mm
+  mean                 -0.1392  0.2419  0.0211
+  std. dev.             0.7171  1.2893  1.0754
+  weight sum             16045    8080   10752
+  precision             0.0102  0.0102  0.0102
+
+nearest_rain
+  mean                  0.0139  0.1066  -0.086
+  std. dev.             0.9305  1.1088  1.0058
+  weight sum             16045    8080   10752
+  precision             0.0152  0.0152  0.0152
+
+
+
+Time taken to build model: 0.05 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       20052               57.4935 %
+Incorrectly Classified Instances     14825               42.5065 %
+Kappa statistic                          0.2919
+Mean absolute error                      0.3065
+Root mean squared error                  0.4464
+Relative absolute error                 71.8737 %
+Root relative squared error             96.6858 %
+Total Number of Instances            34877     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.843    0.495    0.592      0.843    0.696      0.365    0.760     0.695     Medium
+                 0.276    0.051    0.619      0.276    0.382      0.312    0.741     0.516     Low
+                 0.400    0.172    0.509      0.400    0.448      0.246    0.721     0.494     High
+Weighted Avg.    0.575    0.292    0.573      0.575    0.547      0.316    0.744     0.591     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 13521   601  1923 |     a = Medium
+  3630  2234  2216 |     b = Low
+  5683   772  4297 |     c = High
+

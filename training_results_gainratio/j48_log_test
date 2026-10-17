@@ -1,0 +1,622 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     gainratio_train
+Instances:    34877
+Attributes:   11
+              low_irradiation
+              duration_minutes_flood
+              total_daily_snow_mm
+              cumulative_snow_mm
+              NOAAClimRegion
+              snow_value_mm
+              TempZone
+              season
+              flood
+              month
+              PR_class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+low_irradiation <= 0
+|   month <= -1.001925
+|   |   total_daily_snow_mm <= -0.144389
+|   |   |   NOAAClimRegion = Northwest: High (30.0/2.0)
+|   |   |   NOAAClimRegion = Upper Midwest: Low (201.0/88.0)
+|   |   |   NOAAClimRegion = West
+|   |   |   |   cumulative_snow_mm <= 0.460943
+|   |   |   |   |   cumulative_snow_mm <= -0.260754
+|   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   cumulative_snow_mm <= -0.278009: High (886.0/246.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > -0.278009: Low (16.0/3.0)
+|   |   |   |   |   |   month > -1.554266: High (2253.0/982.0)
+|   |   |   |   |   cumulative_snow_mm > -0.260754
+|   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   cumulative_snow_mm <= -0.239359
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.252031: High (88.0/15.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > -0.252031: Medium (18.0/6.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > -0.239359: High (37.0/2.0)
+|   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.309465: High (80.0/24.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.309465: Medium (28.0/3.0)
+|   |   |   |   cumulative_snow_mm > 0.460943: High (180.0/7.0)
+|   |   |   NOAAClimRegion = Southeast
+|   |   |   |   TempZone = T5
+|   |   |   |   |   cumulative_snow_mm <= 0.60086: Medium (627.0/184.0)
+|   |   |   |   |   cumulative_snow_mm > 0.60086: High (36.0/8.0)
+|   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   TempZone = T6: Medium (90.0/17.0)
+|   |   |   |   TempZone = T1: Medium (0.0)
+|   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   cumulative_snow_mm <= 2.321255: Medium (9.0)
+|   |   |   |   cumulative_snow_mm > 2.321255: High (63.0/21.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   cumulative_snow_mm <= 5.733819
+|   |   |   |   |   cumulative_snow_mm <= 1.104452
+|   |   |   |   |   |   cumulative_snow_mm <= 1.0894
+|   |   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.121645: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > -0.121645: High (84.0/21.0)
+|   |   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.298422
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.045069
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.052816
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.158564: Medium (9.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.158564: Low (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.052816
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.013942
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.027373: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.027373: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.013942: High (33.0/12.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.045069: Medium (21.0/10.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 0.298422: High (78.0/21.0)
+|   |   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   |   |   cumulative_snow_mm > 1.0894: Medium (19.0/4.0)
+|   |   |   |   |   cumulative_snow_mm > 1.104452
+|   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   cumulative_snow_mm <= 2.215524
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.992491
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.711839: High (19.0/5.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.711839: Low (4.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 1.992491: High (6.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 2.215524
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 3.9901: Low (16.0/4.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 3.9901: High (11.0/2.0)
+|   |   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.528127
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.437507: High (21.0/3.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.437507: Low (8.0/1.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 1.528127: High (27.0/4.0)
+|   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.800326: Medium (13.0/8.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 1.800326: High (93.0/27.0)
+|   |   |   |   cumulative_snow_mm > 5.733819
+|   |   |   |   |   cumulative_snow_mm <= 7.441844
+|   |   |   |   |   |   cumulative_snow_mm <= 7.151206
+|   |   |   |   |   |   |   cumulative_snow_mm <= 6.606552
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.531436
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.37025: Low (5.0/1.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.37025: Medium (11.0/2.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 6.531436: Low (3.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 6.606552
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.882668
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.847705: High (15.0/4.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.847705: Medium (10.0/4.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 6.882668
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.888307: Low (4.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.888307
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.919712: Medium (5.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.919712
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.084045
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 6.932137: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 6.932137: Low (9.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.084045
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.108789: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.108789
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.128981: Medium (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 7.128981: High (3.0)
+|   |   |   |   |   |   cumulative_snow_mm > 7.151206
+|   |   |   |   |   |   |   cumulative_snow_mm <= 7.341152: Low (18.0/4.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 7.341152
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 7.421953: Medium (12.0/5.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 7.421953: Low (3.0)
+|   |   |   |   |   cumulative_snow_mm > 7.441844
+|   |   |   |   |   |   cumulative_snow_mm <= 7.550488
+|   |   |   |   |   |   |   cumulative_snow_mm <= 7.450061: High (4.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 7.450061: Medium (5.0/1.0)
+|   |   |   |   |   |   cumulative_snow_mm > 7.550488: High (11.0/2.0)
+|   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   NOAAClimRegion = Southwest
+|   |   |   |   cumulative_snow_mm <= 2.421: High (59.0/13.0)
+|   |   |   |   cumulative_snow_mm > 2.421
+|   |   |   |   |   month <= -1.554266: Low (4.0)
+|   |   |   |   |   month > -1.554266: High (14.0/8.0)
+|   |   total_daily_snow_mm > -0.144389
+|   |   |   total_daily_snow_mm <= 2.71714
+|   |   |   |   NOAAClimRegion = Northwest: High (63.0/21.0)
+|   |   |   |   NOAAClimRegion = Upper Midwest: Low (230.0/76.0)
+|   |   |   |   NOAAClimRegion = West
+|   |   |   |   |   total_daily_snow_mm <= -0.051681: Low (3.0/1.0)
+|   |   |   |   |   total_daily_snow_mm > -0.051681: High (34.0/6.0)
+|   |   |   |   NOAAClimRegion = Southeast
+|   |   |   |   |   season = Spring: Medium (40.0/21.0)
+|   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   season = Winter: High (54.0/11.0)
+|   |   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   |   total_daily_snow_mm <= 1.680517
+|   |   |   |   |   |   season = Spring
+|   |   |   |   |   |   |   snow_value_mm <= 0.775051
+|   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.111241: Medium (2.0)
+|   |   |   |   |   |   |   |   total_daily_snow_mm > 1.111241: Low (4.0/1.0)
+|   |   |   |   |   |   |   snow_value_mm > 0.775051: Low (4.0/1.0)
+|   |   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   cumulative_snow_mm <= 3.811803: Medium (4.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 3.811803: High (3.0/1.0)
+|   |   |   |   |   total_daily_snow_mm > 1.680517
+|   |   |   |   |   |   total_daily_snow_mm <= 2.283964: High (8.0)
+|   |   |   |   |   |   total_daily_snow_mm > 2.283964
+|   |   |   |   |   |   |   total_daily_snow_mm <= 2.3293: Medium (3.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > 2.3293: High (2.0)
+|   |   |   |   NOAAClimRegion = Northeast
+|   |   |   |   |   season = Spring: High (84.0/43.0)
+|   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.513717: High (16.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.513717
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.00153: Low (4.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 1.00153: High (4.0/1.0)
+|   |   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   |   cumulative_snow_mm <= -0
+|   |   |   |   |   |   |   |   snow_value_mm <= 0.066502: Low (12.0/1.0)
+|   |   |   |   |   |   |   |   snow_value_mm > 0.066502: High (4.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > -0
+|   |   |   |   |   |   |   |   month <= -1.554266: High (22.0/8.0)
+|   |   |   |   |   |   |   |   month > -1.554266
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 4.121284
+|   |   |   |   |   |   |   |   |   |   snow_value_mm <= 0.533058
+|   |   |   |   |   |   |   |   |   |   |   snow_value_mm <= 0.029575
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.944489
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.226511: High (4.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.226511: Medium (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.944489: High (8.0/3.0)
+|   |   |   |   |   |   |   |   |   |   |   snow_value_mm > 0.029575: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   snow_value_mm > 0.533058: High (5.0/1.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 4.121284: High (13.0/2.0)
+|   |   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   NOAAClimRegion = South
+|   |   |   |   |   season = Spring: Medium (17.0/6.0)
+|   |   |   |   |   season = Autumn: High (0.0)
+|   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   season = Winter: High (44.0/20.0)
+|   |   |   |   NOAAClimRegion = Southwest
+|   |   |   |   |   season = Spring: Low (4.0)
+|   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   total_daily_snow_mm <= 0.592618
+|   |   |   |   |   |   |   snow_value_mm <= 1.856144: High (7.0/2.0)
+|   |   |   |   |   |   |   snow_value_mm > 1.856144: Low (3.0/1.0)
+|   |   |   |   |   |   total_daily_snow_mm > 0.592618: Low (3.0)
+|   |   |   total_daily_snow_mm > 2.71714
+|   |   |   |   TempZone = T5
+|   |   |   |   |   cumulative_snow_mm <= 1.509575: High (20.0/2.0)
+|   |   |   |   |   cumulative_snow_mm > 1.509575: Low (15.0/2.0)
+|   |   |   |   TempZone = T4
+|   |   |   |   |   season = Spring
+|   |   |   |   |   |   NOAAClimRegion = Northwest: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Upper Midwest: Low (26.0/2.0)
+|   |   |   |   |   |   NOAAClimRegion = West: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southeast: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Ohio Valley: Medium (3.0)
+|   |   |   |   |   |   NOAAClimRegion = Northeast
+|   |   |   |   |   |   |   total_daily_snow_mm <= 6.804868
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 4.463138: Low (4.0/1.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 4.463138: Medium (9.0/2.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > 6.804868: Low (11.0)
+|   |   |   |   |   |   NOAAClimRegion = South: Low (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southwest: Low (0.0)
+|   |   |   |   |   season = Autumn: Low (0.0)
+|   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   season = Winter: Low (178.0/16.0)
+|   |   |   |   TempZone = T6: Low (0.0)
+|   |   |   |   TempZone = T1: Low (0.0)
+|   month > -1.001925
+|   |   month <= 0.655098
+|   |   |   NOAAClimRegion = Northwest: Medium (579.0/79.0)
+|   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   cumulative_snow_mm <= -0.14641
+|   |   |   |   |   month <= 0.102757
+|   |   |   |   |   |   month <= -0.173413: High (14.0/7.0)
+|   |   |   |   |   |   month > -0.173413: Medium (27.0/13.0)
+|   |   |   |   |   month > 0.102757: High (60.0/27.0)
+|   |   |   |   cumulative_snow_mm > -0.14641: Low (1511.0/768.0)
+|   |   |   NOAAClimRegion = West: Medium (7289.0/1799.0)
+|   |   |   NOAAClimRegion = Southeast
+|   |   |   |   month <= -0.449584
+|   |   |   |   |   total_daily_snow_mm <= -0.086398: Medium (732.0/253.0)
+|   |   |   |   |   total_daily_snow_mm > -0.086398: Low (86.0/33.0)
+|   |   |   |   month > -0.449584: Medium (1942.0/570.0)
+|   |   |   NOAAClimRegion = Ohio Valley: Medium (111.0/60.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   total_daily_snow_mm <= -0.086398: High (402.0/191.0)
+|   |   |   |   total_daily_snow_mm > -0.086398: Medium (258.0/81.0)
+|   |   |   NOAAClimRegion = South
+|   |   |   |   season = Spring: Medium (68.0/21.0)
+|   |   |   |   season = Autumn: Medium (30.0/8.0)
+|   |   |   |   season = Summer
+|   |   |   |   |   month <= -0.173413: Medium (43.0/14.0)
+|   |   |   |   |   month > -0.173413: Low (143.0/69.0)
+|   |   |   |   season = Winter: Medium (0.0)
+|   |   |   NOAAClimRegion = Southwest
+|   |   |   |   TempZone = T5
+|   |   |   |   |   month <= -0.173413: Medium (71.0/13.0)
+|   |   |   |   |   month > -0.173413
+|   |   |   |   |   |   month <= 0.102757: Low (26.0/8.0)
+|   |   |   |   |   |   month > 0.102757: Medium (49.0/5.0)
+|   |   |   |   TempZone = T4: Medium (0.0)
+|   |   |   |   TempZone = T6: Medium (144.0/4.0)
+|   |   |   |   TempZone = T1: Medium (0.0)
+|   |   month > 0.655098
+|   |   |   cumulative_snow_mm <= -0.044205
+|   |   |   |   season = Spring: Medium (0.0)
+|   |   |   |   season = Autumn
+|   |   |   |   |   NOAAClimRegion = Northwest: High (15.0/3.0)
+|   |   |   |   |   NOAAClimRegion = Upper Midwest: High (22.0/3.0)
+|   |   |   |   |   NOAAClimRegion = West: Medium (2891.0/1117.0)
+|   |   |   |   |   NOAAClimRegion = Southeast: Medium (620.0/215.0)
+|   |   |   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   |   |   month <= 0.931269: High (56.0/22.0)
+|   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   snow_value_mm <= 0.099164
+|   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.241114: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   total_daily_snow_mm > 1.241114: High (2.0)
+|   |   |   |   |   |   |   snow_value_mm > 0.099164: Low (2.0/1.0)
+|   |   |   |   |   NOAAClimRegion = Northeast: High (374.0/139.0)
+|   |   |   |   |   NOAAClimRegion = South: Medium (0.0)
+|   |   |   |   |   NOAAClimRegion = Southwest: High (41.0/11.0)
+|   |   |   |   season = Summer: Medium (0.0)
+|   |   |   |   season = Winter
+|   |   |   |   |   TempZone = T5
+|   |   |   |   |   |   NOAAClimRegion = Northwest: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Upper Midwest: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = West: High (626.0/285.0)
+|   |   |   |   |   |   NOAAClimRegion = Southeast: Medium (142.0/62.0)
+|   |   |   |   |   |   NOAAClimRegion = Ohio Valley: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Northeast: Medium (21.0/2.0)
+|   |   |   |   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southwest: High (0.0)
+|   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   cumulative_snow_mm <= -0.216935
+|   |   |   |   |   |   |   cumulative_snow_mm <= -0.267234: Medium (14.0/7.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > -0.267234: High (9.0/3.0)
+|   |   |   |   |   |   cumulative_snow_mm > -0.216935: Medium (19.0/3.0)
+|   |   |   |   |   TempZone = T6
+|   |   |   |   |   |   NOAAClimRegion = Northwest: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Upper Midwest: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = West: High (474.0/108.0)
+|   |   |   |   |   |   NOAAClimRegion = Southeast: Medium (6.0)
+|   |   |   |   |   |   NOAAClimRegion = Ohio Valley: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Northeast: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = South: High (0.0)
+|   |   |   |   |   |   NOAAClimRegion = Southwest: High (10.0)
+|   |   |   |   |   TempZone = T1: Low (10.0/2.0)
+|   |   |   cumulative_snow_mm > -0.044205
+|   |   |   |   NOAAClimRegion = Northwest: High (43.0/2.0)
+|   |   |   |   NOAAClimRegion = Upper Midwest
+|   |   |   |   |   month <= 0.931269: High (163.0/80.0)
+|   |   |   |   |   month > 0.931269: Low (150.0/33.0)
+|   |   |   |   NOAAClimRegion = West: High (16.0/5.0)
+|   |   |   |   NOAAClimRegion = Southeast
+|   |   |   |   |   snow_value_mm <= -0.062004
+|   |   |   |   |   |   TempZone = T5: Low (18.0/3.0)
+|   |   |   |   |   |   TempZone = T4: Low (0.0)
+|   |   |   |   |   |   TempZone = T6: Medium (13.0/2.0)
+|   |   |   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   |   |   snow_value_mm > -0.062004
+|   |   |   |   |   |   month <= 0.931269: Medium (45.0/22.0)
+|   |   |   |   |   |   month > 0.931269: High (51.0/15.0)
+|   |   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   |   total_daily_snow_mm <= 1.359128
+|   |   |   |   |   |   cumulative_snow_mm <= 1.976194
+|   |   |   |   |   |   |   total_daily_snow_mm <= 1.111241: Medium (35.0/9.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > 1.111241: High (2.0)
+|   |   |   |   |   |   cumulative_snow_mm > 1.976194: High (11.0/1.0)
+|   |   |   |   |   total_daily_snow_mm > 1.359128: Low (5.0/1.0)
+|   |   |   |   NOAAClimRegion = Northeast
+|   |   |   |   |   TempZone = T5: Medium (25.0/10.0)
+|   |   |   |   |   TempZone = T4
+|   |   |   |   |   |   cumulative_snow_mm <= 1.164867
+|   |   |   |   |   |   |   cumulative_snow_mm <= 1.118212
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.00153
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.978439
+|   |   |   |   |   |   |   |   |   |   season = Spring: High (0.0)
+|   |   |   |   |   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   |   |   |   |   month <= 0.931269: High (15.0/5.0)
+|   |   |   |   |   |   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.927129
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.524979
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   snow_value_mm <= 0.001278: Low (13.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   snow_value_mm > 0.001278
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.517708: High (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.517708: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 1.524979: High (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.927129
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.94285
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.703455: Medium (3.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.703455: Low (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.94285: Medium (2.0/1.0)
+|   |   |   |   |   |   |   |   |   |   season = Summer: High (0.0)
+|   |   |   |   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.079426
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.013942: Medium (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.013942: Low (26.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.079426
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.833038
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.792345
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.761562
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.709079: High (14.0/6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.709079: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.761562: High (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.792345: Medium (6.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.833038
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.952236: High (25.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.952236
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.968831: Low (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.968831: High (2.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.978439
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.981103: Low (6.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.981103: Medium (4.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 1.00153
+|   |   |   |   |   |   |   |   |   snow_value_mm <= 0.29825: High (31.0/2.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > 0.29825
+|   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.184396: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.184396: Medium (2.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 1.118212
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.141362: Low (13.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 1.141362: Medium (8.0/2.0)
+|   |   |   |   |   |   cumulative_snow_mm > 1.164867: High (14.0)
+|   |   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   |   TempZone = T1: High (0.0)
+|   |   |   |   NOAAClimRegion = South
+|   |   |   |   |   month <= 0.931269: Medium (28.0/8.0)
+|   |   |   |   |   month > 0.931269: High (57.0/24.0)
+|   |   |   |   NOAAClimRegion = Southwest
+|   |   |   |   |   cumulative_snow_mm <= 0.022805: High (5.0)
+|   |   |   |   |   cumulative_snow_mm > 0.022805
+|   |   |   |   |   |   cumulative_snow_mm <= 0.216639: Medium (28.0/2.0)
+|   |   |   |   |   |   cumulative_snow_mm > 0.216639: Low (2.0)
+low_irradiation > 0
+|   cumulative_snow_mm <= -0.20813
+|   |   NOAAClimRegion = Northwest
+|   |   |   snow_value_mm <= 0.29825: High (43.0/14.0)
+|   |   |   snow_value_mm > 0.29825: Medium (2.0/1.0)
+|   |   NOAAClimRegion = Upper Midwest
+|   |   |   month <= 0.102757: Medium (43.0/13.0)
+|   |   |   month > 0.102757
+|   |   |   |   total_daily_snow_mm <= -0.110001
+|   |   |   |   |   cumulative_snow_mm <= -0.283062
+|   |   |   |   |   |   month <= 0.655098: High (86.0/47.0)
+|   |   |   |   |   |   month > 0.655098: Low (34.0/19.0)
+|   |   |   |   |   cumulative_snow_mm > -0.283062
+|   |   |   |   |   |   cumulative_snow_mm <= -0.267234: Medium (23.0/9.0)
+|   |   |   |   |   |   cumulative_snow_mm > -0.267234: High (7.0/3.0)
+|   |   |   |   total_daily_snow_mm > -0.110001
+|   |   |   |   |   total_daily_snow_mm <= 0.451848: Low (6.0)
+|   |   |   |   |   total_daily_snow_mm > 0.451848: Medium (2.0/1.0)
+|   |   NOAAClimRegion = West
+|   |   |   season = Spring: High (260.0/74.0)
+|   |   |   season = Autumn
+|   |   |   |   TempZone = T5: High (182.0/104.0)
+|   |   |   |   TempZone = T4
+|   |   |   |   |   month <= 0.931269: Low (2.0)
+|   |   |   |   |   month > 0.931269: High (12.0/3.0)
+|   |   |   |   TempZone = T6
+|   |   |   |   |   month <= 0.931269: High (4.0/1.0)
+|   |   |   |   |   month > 0.931269: Medium (55.0/20.0)
+|   |   |   |   TempZone = T1: High (0.0)
+|   |   |   season = Summer: Medium (6.0/2.0)
+|   |   |   season = Winter
+|   |   |   |   cumulative_snow_mm <= -0.278009: High (1451.0/580.0)
+|   |   |   |   cumulative_snow_mm > -0.278009
+|   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   cumulative_snow_mm <= -0.260754: Low (8.0/3.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > -0.260754: High (49.0/20.0)
+|   |   |   |   |   |   month > -1.554266: High (26.0/5.0)
+|   |   |   |   |   month > -0.173413: Low (6.0/2.0)
+|   |   NOAAClimRegion = Southeast
+|   |   |   month <= -1.554266: Medium (130.0/70.0)
+|   |   |   month > -1.554266
+|   |   |   |   season = Spring
+|   |   |   |   |   month <= -0.725754
+|   |   |   |   |   |   month <= -1.001925: Medium (71.0/43.0)
+|   |   |   |   |   |   month > -1.001925: Low (56.0/34.0)
+|   |   |   |   |   month > -0.725754: Medium (53.0/24.0)
+|   |   |   |   season = Autumn: Low (275.0/141.0)
+|   |   |   |   season = Summer
+|   |   |   |   |   month <= 0.102757: Medium (37.0/16.0)
+|   |   |   |   |   month > 0.102757: Low (13.0/6.0)
+|   |   |   |   season = Winter: Low (239.0/107.0)
+|   |   NOAAClimRegion = Ohio Valley
+|   |   |   season = Spring: Low (0.0)
+|   |   |   season = Autumn: Low (70.0/40.0)
+|   |   |   season = Summer: High (3.0/1.0)
+|   |   |   season = Winter: Low (0.0)
+|   |   NOAAClimRegion = Northeast
+|   |   |   month <= 0.931269
+|   |   |   |   season = Spring: High (0.0)
+|   |   |   |   season = Autumn: High (399.0/227.0)
+|   |   |   |   season = Summer: Low (13.0/4.0)
+|   |   |   |   season = Winter: High (11.0/6.0)
+|   |   |   month > 0.931269: Low (123.0/53.0)
+|   |   NOAAClimRegion = South: High (0.0)
+|   |   NOAAClimRegion = Southwest: High (55.0/21.0)
+|   cumulative_snow_mm > -0.20813
+|   |   total_daily_snow_mm <= 1.763032
+|   |   |   NOAAClimRegion = Northwest: High (423.0/165.0)
+|   |   |   NOAAClimRegion = Upper Midwest: Low (2149.0/795.0)
+|   |   |   NOAAClimRegion = West
+|   |   |   |   TempZone = T5
+|   |   |   |   |   month <= -1.001925: High (43.0/7.0)
+|   |   |   |   |   month > -1.001925: Medium (7.0/3.0)
+|   |   |   |   TempZone = T4: High (0.0)
+|   |   |   |   TempZone = T6: High (0.0)
+|   |   |   |   TempZone = T1
+|   |   |   |   |   total_daily_snow_mm <= -0.086398: Medium (18.0/10.0)
+|   |   |   |   |   total_daily_snow_mm > -0.086398: High (3.0/1.0)
+|   |   |   NOAAClimRegion = Southeast: Low (262.0/137.0)
+|   |   |   NOAAClimRegion = Ohio Valley
+|   |   |   |   snow_value_mm <= 0.351498
+|   |   |   |   |   cumulative_snow_mm <= 9.533843
+|   |   |   |   |   |   season = Spring: Low (31.0/15.0)
+|   |   |   |   |   |   season = Autumn
+|   |   |   |   |   |   |   total_daily_snow_mm <= 1.397924
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.022805: Low (3.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 0.022805
+|   |   |   |   |   |   |   |   |   snow_value_mm <= -0.110779
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.931673: Medium (14.0/7.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.931673: High (7.0/2.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > -0.110779: Low (2.0/1.0)
+|   |   |   |   |   |   |   total_daily_snow_mm > 1.397924: Low (4.0)
+|   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   cumulative_snow_mm <= 5.454262: Low (76.0/31.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 5.454262: High (16.0/6.0)
+|   |   |   |   |   cumulative_snow_mm > 9.533843
+|   |   |   |   |   |   cumulative_snow_mm <= 9.610185: High (5.0/1.0)
+|   |   |   |   |   |   cumulative_snow_mm > 9.610185: Medium (3.0/1.0)
+|   |   |   |   snow_value_mm > 0.351498: Low (12.0/1.0)
+|   |   |   NOAAClimRegion = Northeast
+|   |   |   |   TempZone = T5
+|   |   |   |   |   snow_value_mm <= 0.110842
+|   |   |   |   |   |   total_daily_snow_mm <= -0.134319
+|   |   |   |   |   |   |   season = Spring: Low (18.0/9.0)
+|   |   |   |   |   |   |   season = Autumn: High (22.0/10.0)
+|   |   |   |   |   |   |   season = Summer: Low (0.0)
+|   |   |   |   |   |   |   season = Winter
+|   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.114644: Low (22.0/9.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.114644: High (14.0/1.0)
+|   |   |   |   |   |   |   |   month > -1.554266: Low (54.0/29.0)
+|   |   |   |   |   |   total_daily_snow_mm > -0.134319: High (7.0/1.0)
+|   |   |   |   |   snow_value_mm > 0.110842: Low (17.0/1.0)
+|   |   |   |   TempZone = T4
+|   |   |   |   |   season = Spring
+|   |   |   |   |   |   cumulative_snow_mm <= 0.838622: Medium (88.0/53.0)
+|   |   |   |   |   |   cumulative_snow_mm > 0.838622: Low (59.0/21.0)
+|   |   |   |   |   season = Autumn
+|   |   |   |   |   |   month <= 0.931269
+|   |   |   |   |   |   |   month <= 0.655098: Medium (11.0/5.0)
+|   |   |   |   |   |   |   month > 0.655098: Low (33.0/16.0)
+|   |   |   |   |   |   month > 0.931269
+|   |   |   |   |   |   |   snow_value_mm <= -0.062004
+|   |   |   |   |   |   |   |   total_daily_snow_mm <= -0.103185
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.927129
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.579732: Low (23.0/8.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.579732: High (35.0/14.0)
+|   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.927129: Low (13.0/2.0)
+|   |   |   |   |   |   |   |   total_daily_snow_mm > -0.103185: High (7.0/2.0)
+|   |   |   |   |   |   |   snow_value_mm > -0.062004
+|   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.829331: Low (54.0/9.0)
+|   |   |   |   |   |   |   |   cumulative_snow_mm > 0.829331: High (7.0/2.0)
+|   |   |   |   |   season = Summer
+|   |   |   |   |   |   month <= 0.102757: Low (17.0/9.0)
+|   |   |   |   |   |   month > 0.102757: Medium (10.0/2.0)
+|   |   |   |   |   season = Winter
+|   |   |   |   |   |   snow_value_mm <= 0.447886
+|   |   |   |   |   |   |   cumulative_snow_mm <= 2.540236
+|   |   |   |   |   |   |   |   month <= -0.173413
+|   |   |   |   |   |   |   |   |   snow_value_mm <= 0.067155
+|   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= -0.127709
+|   |   |   |   |   |   |   |   |   |   |   month <= -1.554266
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.536271
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.045069
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.052816
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= -0.158564: Medium (9.0/4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.158564: Low (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > -0.052816: High (32.0/18.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.045069: Low (17.0/2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.536271
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.877943: Medium (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.877943: High (54.0/28.0)
+|   |   |   |   |   |   |   |   |   |   |   month > -1.554266: Low (35.0/18.0)
+|   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > -0.127709
+|   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm <= 0.076205
+|   |   |   |   |   |   |   |   |   |   |   |   month <= -1.554266: Low (30.0/10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   month > -1.554266: High (21.0/11.0)
+|   |   |   |   |   |   |   |   |   |   |   total_daily_snow_mm > 0.076205: High (7.0/1.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > 0.067155
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 1.446257: Low (10.0/1.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 1.446257: Medium (3.0)
+|   |   |   |   |   |   |   |   month > -0.173413
+|   |   |   |   |   |   |   |   |   snow_value_mm <= 0.029575: Low (204.0/91.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > 0.029575
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm <= 0.309465: Low (2.0)
+|   |   |   |   |   |   |   |   |   |   cumulative_snow_mm > 0.309465: High (7.0/3.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 2.540236
+|   |   |   |   |   |   |   |   total_daily_snow_mm <= 1.044585: Low (58.0/12.0)
+|   |   |   |   |   |   |   |   total_daily_snow_mm > 1.044585: Medium (2.0)
+|   |   |   |   |   |   snow_value_mm > 0.447886
+|   |   |   |   |   |   |   cumulative_snow_mm <= 0.549797: Low (5.0/1.0)
+|   |   |   |   |   |   |   cumulative_snow_mm > 0.549797
+|   |   |   |   |   |   |   |   snow_value_mm <= 0.874088
+|   |   |   |   |   |   |   |   |   snow_value_mm <= 0.680633: High (4.0)
+|   |   |   |   |   |   |   |   |   snow_value_mm > 0.680633: Low (3.0)
+|   |   |   |   |   |   |   |   snow_value_mm > 0.874088: High (10.0)
+|   |   |   |   TempZone = T6: Low (0.0)
+|   |   |   |   TempZone = T1: Low (0.0)
+|   |   |   NOAAClimRegion = South: Low (165.0/77.0)
+|   |   |   NOAAClimRegion = Southwest: Low (97.0/41.0)
+|   |   total_daily_snow_mm > 1.763032: Low (473.0/46.0)
+
+Number of Leaves  : 	339
+
+Size of the tree : 	561
+
+
+Time taken to build model: 0.23 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.03 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        5642               64.7018 %
+Incorrectly Classified Instances      3078               35.2982 %
+Kappa statistic                          0.4451
+Mean absolute error                      0.3208
+Root mean squared error                  0.4049
+Relative absolute error                 75.2348 %
+Root relative squared error             87.686  %
+Total Number of Instances             8720     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.726    0.271    0.695      0.726    0.710      0.453    0.773     0.703     Medium
+                 0.570    0.122    0.585      0.570    0.578      0.453    0.794     0.567     Low
+                 0.587    0.163    0.616      0.587    0.601      0.430    0.776     0.603     High
+Weighted Avg.    0.647    0.203    0.645      0.647    0.646      0.446    0.778     0.640     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 2912  458  642 |    a = Medium
+  525 1152  343 |    b = Low
+  752  358 1578 |    c = High
+

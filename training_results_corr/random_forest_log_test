@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     correlation_train
+Instances:    34877
+Attributes:   11
+              low_irradiation
+              NOAAClimRegion
+              total_daily_snow_mm
+              TempZone
+              season
+              cumulative_snow_mm
+              snow_value_mm
+              month
+              wind_speed_mean
+              plant_age_months
+              PR_class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 10.23 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.76 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        5908               67.7523 %
+Incorrectly Classified Instances      2812               32.2477 %
+Kappa statistic                          0.4946
+Mean absolute error                      0.2364
+Root mean squared error                  0.3867
+Relative absolute error                 55.4391 %
+Root relative squared error             83.7478 %
+Total Number of Instances             8720     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.735    0.241    0.722      0.735    0.729      0.494    0.832     0.803     Medium
+                 0.599    0.115    0.610      0.599    0.605      0.487    0.856     0.675     Low
+                 0.651    0.150    0.659      0.651    0.655      0.502    0.856     0.728     High
+Weighted Avg.    0.678    0.184    0.677      0.678    0.677      0.495    0.845     0.750     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 2949  459  604 |    a = Medium
+  507 1210  303 |    b = Low
+  626  313 1749 |    c = High
+

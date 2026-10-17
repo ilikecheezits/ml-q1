@@ -1,0 +1,95 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     manual_train
+Instances:    34877
+Attributes:   13
+              NOAAClimRegion
+              TempZone
+              HumidZone
+              bin_PlantSize_kW
+              plant_age_months
+              month
+              low_irradiation
+              total_daily_snow_mm
+              cumulative_snow_mm
+              rain_value_mm
+              nearest_rain
+              wind_speed_mean
+              PR_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(TempZone = T4) and (NOAAClimRegion = Upper Midwest) and (total_daily_snow_mm >= 0.576117) => PR_class=Low (627.0/70.0)
+(TempZone = T4) and (NOAAClimRegion = Upper Midwest) and (nearest_rain >= -0.505023) and (plant_age_months >= -1.658918) => PR_class=Low (1308.0/236.0)
+(cumulative_snow_mm >= -0.20737) and (low_irradiation >= 1) and (total_daily_snow_mm >= 1.691365) => PR_class=Low (144.0/15.0)
+(low_irradiation >= 1) and (cumulative_snow_mm >= -0.221039) and (plant_age_months <= -1.102462) => PR_class=Low (984.0/412.0)
+(low_irradiation >= 1) and (cumulative_snow_mm >= -0.200244) and (nearest_rain <= -0.489858) and (rain_value_mm >= -0.084281) and (month >= 0.655098) => PR_class=Low (243.0/81.0)
+(low_irradiation >= 1) and (TempZone = T4) and (plant_age_months >= 1.637012) and (plant_age_months <= 2.450293) => PR_class=Low (74.0/5.0)
+(low_irradiation >= 1) and (cumulative_snow_mm >= -0.20813) and (nearest_rain <= -0.262388) and (rain_value_mm >= -0.170642) and (month <= -1.278095) => PR_class=Low (191.0/80.0)
+(cumulative_snow_mm >= -0.204719) and (NOAAClimRegion = Upper Midwest) and (bin_PlantSize_kW = medium) and (low_irradiation <= 0) => PR_class=Low (977.0/429.0)
+(low_irradiation >= 1) and (NOAAClimRegion = Southeast) and (month >= 1.207439) and (rain_value_mm >= 0.025947) => PR_class=Low (118.0/35.0)
+(low_irradiation >= 1) and (cumulative_snow_mm >= 1.402715) => PR_class=Low (302.0/136.0)
+(low_irradiation >= 1) and (NOAAClimRegion = Southeast) and (rain_value_mm >= -0.200183) and (month >= 1.207439) => PR_class=Low (111.0/49.0)
+(low_irradiation >= 1) and (TempZone = T4) and (month >= 1.207439) and (nearest_rain <= -0.686999) => PR_class=Low (143.0/63.0)
+(month <= -1.001925) and (NOAAClimRegion = West) and (wind_speed_mean <= 0.177878) and (nearest_rain >= -0.292717) => PR_class=High (469.0/73.0)
+(month <= -1.001925) and (NOAAClimRegion = West) and (plant_age_months >= 0.952143) => PR_class=High (993.0/298.0)
+(month <= -1.278095) and (plant_age_months <= 0.438492) and (rain_value_mm <= -0.224574) and (nearest_rain >= -0.65667) and (bin_PlantSize_kW = large) and (wind_speed_mean >= -0.191725) => PR_class=High (209.0/39.0)
+(month <= -1.278095) and (NOAAClimRegion = West) and (plant_age_months <= 0.438492) and (rain_value_mm <= 0.02776) and (rain_value_mm >= -0.098269) => PR_class=High (95.0/15.0)
+(month >= 1.48361) and (NOAAClimRegion = West) and (plant_age_months <= -0.032355) => PR_class=High (749.0/208.0)
+(month <= -1.001925) and (NOAAClimRegion = West) and (plant_age_months <= -0.331985) => PR_class=High (1195.0/403.0)
+(plant_age_months <= 0.823731) and (TempZone = T6) and (month <= -1.554266) and (bin_PlantSize_kW = small) => PR_class=High (149.0/20.0)
+(month <= -1.278095) and (plant_age_months <= 0.138862) and (TempZone = T5) => PR_class=High (485.0/177.0)
+(nearest_rain <= -0.505023) and (bin_PlantSize_kW = small) and (plant_age_months >= 0.609709) and (HumidZone = H4) and (month >= 0.931269) and (cumulative_snow_mm <= -0.255526) => PR_class=High (922.0/324.0)
+(month <= -1.278095) and (rain_value_mm <= -0.280603) and (NOAAClimRegion = Northeast) => PR_class=High (336.0/127.0)
+(nearest_rain <= -0.535352) and (NOAAClimRegion = West) and (month >= 1.207439) and (TempZone = T6) => PR_class=High (213.0/61.0)
+(month <= -0.725754) and (NOAAClimRegion = West) and (bin_PlantSize_kW = medium) and (plant_age_months >= 0.267275) and (wind_speed_mean >= -0.810729) => PR_class=High (252.0/44.0)
+(TempZone = T4) and (low_irradiation <= 0) and (month >= 0.931269) => PR_class=High (684.0/312.0)
+(month >= 1.48361) and (bin_PlantSize_kW = large) and (cumulative_snow_mm <= -0.292706) => PR_class=High (102.0/20.0)
+(month <= -1.001925) and (bin_PlantSize_kW = large) and (NOAAClimRegion = Northwest) => PR_class=High (208.0/74.0)
+(month <= -0.725754) and (bin_PlantSize_kW = large) and (plant_age_months >= -0.160768) => PR_class=High (655.0/310.0)
+(nearest_rain <= -0.505023) and (plant_age_months <= 0.096058) and (month >= 1.207439) and (cumulative_snow_mm <= -0.152112) => PR_class=High (204.0/68.0)
+(bin_PlantSize_kW = small) and (plant_age_months >= 2.450293) => PR_class=High (283.0/70.0)
+(month <= -0.725754) and (cumulative_snow_mm >= -0.027373) and (plant_age_months >= 0.053254) and (NOAAClimRegion = Northeast) and (total_daily_snow_mm <= 0.632664) and (plant_age_months <= 1.808229) and (cumulative_snow_mm <= 6.696132) => PR_class=High (62.0/15.0)
+(low_irradiation >= 1) and (NOAAClimRegion = Northwest) and (wind_speed_mean >= -0.593182) and (wind_speed_mean <= -0.186882) => PR_class=High (71.0/18.0)
+(month <= -0.725754) and (plant_age_months <= -0.974049) and (TempZone = T5) => PR_class=High (136.0/55.0)
+(low_irradiation >= 1) and (bin_PlantSize_kW = large) and (NOAAClimRegion = Northwest) and (month <= -0.449584) => PR_class=High (22.0/1.0)
+(low_irradiation >= 1) and (NOAAClimRegion = West) and (plant_age_months >= 0.609709) and (plant_age_months <= 0.909339) and (month >= -1.001925) and (wind_speed_mean >= -0.681363) => PR_class=High (37.0/2.0)
+ => PR_class=Medium (21124.0/7500.0)
+
+Number of Rules : 36
+
+
+Time taken to build model: 9.19 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       22781               65.3181 %
+Incorrectly Classified Instances     12096               34.6819 %
+Kappa statistic                          0.4313
+Mean absolute error                      0.3324
+Root mean squared error                  0.4103
+Relative absolute error                 77.9528 %
+Root relative squared error             88.855  %
+Total Number of Instances            34877     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.848    0.412    0.637      0.848    0.728      0.447    0.736     0.635     Medium
+                 0.430    0.059    0.688      0.430    0.529      0.445    0.719     0.544     Low
+                 0.530    0.115    0.673      0.530    0.593      0.447    0.731     0.598     High
+Weighted Avg.    0.653    0.238    0.660      0.653    0.640      0.446    0.730     0.602     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 13609   754  1682 |     a = Medium
+  3523  3476  1081 |     b = Low
+  4230   826  5696 |     c = High
+

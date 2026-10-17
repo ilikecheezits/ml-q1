@@ -1,0 +1,59 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     infogain_train
+Instances:    34877
+Attributes:   11
+              NOAAClimRegion
+              month
+              cumulative_snow_mm
+              plant_age_months
+              season
+              TempZone
+              nearest_rain
+              low_irradiation
+              total_daily_snow_mm
+              nearest_flood
+              PR_class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 6.24 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.81 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        6273               71.9381 %
+Incorrectly Classified Instances      2447               28.0619 %
+Kappa statistic                          0.5613
+Mean absolute error                      0.2187
+Root mean squared error                  0.3647
+Relative absolute error                 51.2784 %
+Root relative squared error             78.9744 %
+Total Number of Instances             8720     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.761    0.204    0.761      0.761    0.761      0.558    0.856     0.832     Medium
+                 0.661    0.104    0.658      0.661    0.660      0.557    0.886     0.743     Low
+                 0.700    0.131    0.704      0.700    0.702      0.570    0.881     0.777     High
+Weighted Avg.    0.719    0.158    0.719      0.719    0.719      0.561    0.871     0.794     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 3055  422  535 |    a = Medium
+  427 1336  257 |    b = Low
+  533  273 1882 |    c = High
+

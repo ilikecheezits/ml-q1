@@ -1,0 +1,85 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     cfs_train
+Instances:    34877
+Attributes:   9
+              month
+              season
+              NOAAClimRegion
+              TempZone
+              total_daily_snow_mm
+              low_irradiation
+              cumulative_snow_mm
+              nearest_rain
+              PR_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(TempZone = T4) and (NOAAClimRegion = Upper Midwest) and (total_daily_snow_mm >= -0.167473) => PR_class=Low (1721.0/381.0)
+(TempZone = T4) and (NOAAClimRegion = Upper Midwest) and (total_daily_snow_mm <= -0.014644) and (nearest_rain >= 1.875833) => PR_class=Low (345.0/4.0)
+(cumulative_snow_mm >= -0.141903) and (low_irradiation >= 1) and (total_daily_snow_mm >= 0.255023) => PR_class=Low (286.0/73.0)
+(low_irradiation >= 1) and (cumulative_snow_mm >= -0.20737) and (nearest_rain <= -0.247223) and (TempZone = T4) and (season = Winter) and (cumulative_snow_mm <= 0.506253) => PR_class=Low (460.0/148.0)
+(cumulative_snow_mm >= -0.136318) and (low_irradiation >= 1) and (NOAAClimRegion = Upper Midwest) and (nearest_rain >= -0.611176) and (month <= 0.102757) => PR_class=Low (60.0/22.0)
+(low_irradiation >= 1) and (nearest_rain <= -0.62634) and (NOAAClimRegion = Northeast) and (cumulative_snow_mm >= 1.071991) => PR_class=Low (133.0/41.0)
+(cumulative_snow_mm >= -0.20737) and (NOAAClimRegion = Upper Midwest) and (season = Winter) and (cumulative_snow_mm <= -0) => PR_class=Low (83.0/17.0)
+(low_irradiation >= 1) and (cumulative_snow_mm >= -0.251164) and (nearest_rain <= -0.686999) and (month >= 0.931269) => PR_class=Low (295.0/122.0)
+(low_irradiation >= 1) and (cumulative_snow_mm >= -0.275885) and (month >= 1.207439) and (cumulative_snow_mm <= 0.111166) and (NOAAClimRegion = Northeast) and (nearest_rain >= -0.535352) => PR_class=Low (85.0/23.0)
+(low_irradiation >= 1) and (NOAAClimRegion = Southeast) and (nearest_rain <= -0.686999) and (season = Winter) => PR_class=Low (213.0/83.0)
+(low_irradiation >= 1) and (TempZone = T4) and (NOAAClimRegion = Northeast) and (month >= 1.207439) and (nearest_rain <= -0.686999) => PR_class=Low (34.0/6.0)
+(season = Winter) and (NOAAClimRegion = West) and (TempZone = T6) => PR_class=High (1855.0/539.0)
+(month <= -1.001925) and (NOAAClimRegion = West) and (nearest_rain >= -0.307882) => PR_class=High (548.0/78.0)
+(month <= -1.001925) and (NOAAClimRegion = West) and (cumulative_snow_mm >= 0.488712) => PR_class=High (125.0/5.0)
+(season = Winter) and (NOAAClimRegion = West) and (month <= -1.278095) => PR_class=High (1611.0/650.0)
+(month <= -1.001925) and (NOAAClimRegion = West) and (low_irradiation >= 1) => PR_class=High (191.0/51.0)
+(season = Winter) and (NOAAClimRegion = West) and (nearest_rain <= -0.641505) => PR_class=High (448.0/181.0)
+(month <= -1.001925) and (NOAAClimRegion = Northwest) => PR_class=High (285.0/100.0)
+(nearest_rain <= -0.550517) and (NOAAClimRegion = West) and (month >= 1.207439) and (low_irradiation <= 0) => PR_class=High (470.0/172.0)
+(NOAAClimRegion = Northeast) and (total_daily_snow_mm <= 1.324277) and (low_irradiation <= 0) and (month <= -1.278095) and (cumulative_snow_mm >= 0.317152) => PR_class=High (292.0/90.0)
+(month <= -1.001925) and (NOAAClimRegion = West) and (nearest_rain <= -0.611176) and (TempZone = T5) and (cumulative_snow_mm <= -0.292706) => PR_class=High (449.0/204.0)
+(month >= 0.931269) and (TempZone = T4) and (low_irradiation <= 0) => PR_class=High (872.0/395.0)
+(month <= -1.001925) and (total_daily_snow_mm <= 2.349041) and (nearest_rain <= -0.535352) and (NOAAClimRegion = Northeast) and (cumulative_snow_mm <= 1.010406) and (cumulative_snow_mm >= -0.015798) => PR_class=High (221.0/85.0)
+(cumulative_snow_mm <= 1.450549) and (month <= -1.278095) and (cumulative_snow_mm >= -0.027373) and (low_irradiation <= 0) and (TempZone = T5) => PR_class=High (97.0/21.0)
+(month >= 1.48361) and (NOAAClimRegion = West) and (TempZone = T5) and (nearest_rain >= -0.414035) => PR_class=High (181.0/64.0)
+(low_irradiation >= 1) and (NOAAClimRegion = Northwest) and (month <= -0.449584) => PR_class=High (44.0/6.0)
+(month <= -0.725754) and (NOAAClimRegion = West) and (nearest_rain >= -0.156235) and (low_irradiation <= 0) => PR_class=High (90.0/35.0)
+(low_irradiation >= 1) and (NOAAClimRegion = Northwest) and (season = Autumn) => PR_class=High (126.0/46.0)
+(cumulative_snow_mm <= -0.292706) and (month <= -1.001925) and (TempZone = T6) and (NOAAClimRegion = Southwest) => PR_class=High (75.0/21.0)
+ => PR_class=Medium (23182.0/9313.0)
+
+Number of Rules : 30
+
+
+Time taken to build model: 4.91 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       21882               62.7405 %
+Incorrectly Classified Instances     12995               37.2595 %
+Kappa statistic                          0.3846
+Mean absolute error                      0.3494
+Root mean squared error                  0.4191
+Relative absolute error                 81.9285 %
+Root relative squared error             90.7529 %
+Total Number of Instances            34877     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.834    0.454    0.610      0.834    0.705      0.392    0.707     0.605     Medium
+                 0.367    0.044    0.714      0.367    0.485      0.421    0.696     0.517     Low
+                 0.515    0.135    0.629      0.515    0.566      0.404    0.715     0.565     High
+Weighted Avg.    0.627    0.261    0.640      0.627    0.611      0.402    0.707     0.573     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 13376   537  2132 |     a = Medium
+  3982  2969  1129 |     b = Low
+  4562   653  5537 |     c = High
+

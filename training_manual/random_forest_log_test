@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     manual_train
+Instances:    34877
+Attributes:   13
+              NOAAClimRegion
+              TempZone
+              HumidZone
+              bin_PlantSize_kW
+              plant_age_months
+              month
+              low_irradiation
+              total_daily_snow_mm
+              cumulative_snow_mm
+              rain_value_mm
+              nearest_rain
+              wind_speed_mean
+              PR_class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 9.3 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.99 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        6323               72.5115 %
+Incorrectly Classified Instances      2397               27.4885 %
+Kappa statistic                          0.5691
+Mean absolute error                      0.2229
+Root mean squared error                  0.3559
+Relative absolute error                 52.2795 %
+Root relative squared error             77.0734 %
+Total Number of Instances             8720     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.767    0.211    0.756      0.767    0.762      0.556    0.863     0.842     Medium
+                 0.663    0.091    0.688      0.663    0.675      0.580    0.889     0.746     Low
+                 0.709    0.132    0.706      0.709    0.707      0.576    0.890     0.785     High
+Weighted Avg.    0.725    0.159    0.725      0.725    0.725      0.568    0.877     0.802     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 3078  375  559 |    a = Medium
+  445 1340  235 |    b = Low
+  549  234 1905 |    c = High
+

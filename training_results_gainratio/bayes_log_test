@@ -1,0 +1,128 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     gainratio_train
+Instances:    34877
+Attributes:   11
+              low_irradiation
+              duration_minutes_flood
+              total_daily_snow_mm
+              cumulative_snow_mm
+              NOAAClimRegion
+              snow_value_mm
+              TempZone
+              season
+              flood
+              month
+              PR_class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                           Class
+Attribute                 Medium     Low    High
+                          (0.46)  (0.23)  (0.31)
+=================================================
+low_irradiation
+  mean                     0.1161  0.4731  0.2807
+  std. dev.                0.3204  0.4993  0.4493
+  weight sum                16045    8080   10752
+  precision                     1       1       1
+
+duration_minutes_flood
+  mean                     0.0073  0.0728  0.0036
+  std. dev.                2.1776  2.1776  2.1776
+  weight sum                16045    8080   10752
+  precision               13.0656 13.0656 13.0656
+
+total_daily_snow_mm
+  mean                    -0.1322  0.4061 -0.1081
+  std. dev.                0.3401  1.9124  0.4014
+  weight sum                16045    8080   10752
+  precision                0.0122  0.0122  0.0122
+
+cumulative_snow_mm
+  mean                    -0.1392  0.2419  0.0211
+  std. dev.                0.7171  1.2893  1.0754
+  weight sum                16045    8080   10752
+  precision                0.0102  0.0102  0.0102
+
+NOAAClimRegion
+  Northwest                 607.0   114.0   481.0
+  Upper Midwest            1134.0  2994.0  1032.0
+  West                     9070.0  1905.0  6124.0
+  Southeast                3355.0  1284.0  1005.0
+  Ohio Valley               184.0   243.0   229.0
+  Northeast                1094.0  1194.0  1604.0
+  South                     267.0   215.0   116.0
+  Southwest                 342.0   139.0   169.0
+  [total]                 16053.0  8088.0 10760.0
+
+snow_value_mm
+  mean                    -0.0921  0.2725 -0.0738
+  std. dev.                0.2176  1.9825  0.3829
+  weight sum                16045    8080   10752
+  precision                0.0377  0.0377  0.0377
+
+TempZone
+  T5                       8170.0  2507.0  5263.0
+  T4                       2578.0  4421.0  2811.0
+  T6                       5265.0  1130.0  2533.0
+  T1                         36.0    26.0   149.0
+  [total]                 16049.0  8084.0 10756.0
+
+season
+  Spring                   3604.0  1427.0  2598.0
+  Autumn                   4898.0  2218.0  2703.0
+  Summer                   5279.0  1637.0   781.0
+  Winter                   2268.0  2802.0  4674.0
+  [total]                 16049.0  8084.0 10756.0
+
+flood
+  mean                     0.0004  0.0024  0.0007
+  std. dev.                0.1667  0.1667  0.1667
+  weight sum                16045    8080   10752
+  precision                     1       1       1
+
+month
+  mean                    -0.0072  -0.083 -0.2602
+  std. dev.                 0.828  1.0643  1.1536
+  weight sum                16045    8080   10752
+  precision                0.2762  0.2762  0.2762
+
+
+
+Time taken to build model: 0.04 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.26 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        4604               52.7982 %
+Incorrectly Classified Instances      4116               47.2018 %
+Kappa statistic                          0.1874
+Mean absolute error                      0.3162
+Root mean squared error                  0.4819
+Relative absolute error                 74.1596 %
+Root relative squared error            104.3589 %
+Total Number of Instances             8720     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.893    0.637    0.544      0.893    0.677      0.297    0.753     0.686     Medium
+                 0.144    0.021    0.678      0.144    0.237      0.240    0.735     0.508     Low
+                 0.272    0.162    0.427      0.272    0.332      0.127    0.697     0.445     High
+Weighted Avg.    0.528    0.348    0.539      0.528    0.469      0.231    0.732     0.571     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 3584   59  369 |    a = Medium
+ 1120  290  610 |    b = Low
+ 1879   79  730 |    c = High
+

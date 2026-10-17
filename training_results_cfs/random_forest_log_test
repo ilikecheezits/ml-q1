@@ -1,0 +1,57 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     cfs_train
+Instances:    34877
+Attributes:   9
+              month
+              season
+              NOAAClimRegion
+              TempZone
+              total_daily_snow_mm
+              low_irradiation
+              cumulative_snow_mm
+              nearest_rain
+              PR_class
+Test mode:    user supplied test set:  size unknown (reading incrementally)
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 3.39 seconds
+
+=== Evaluation on test set ===
+
+Time taken to test model on supplied test set: 0.58 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        5742               65.8486 %
+Incorrectly Classified Instances      2978               34.1514 %
+Kappa statistic                          0.4597
+Mean absolute error                      0.2849
+Root mean squared error                  0.3948
+Relative absolute error                 66.8187 %
+Root relative squared error             85.5021 %
+Total Number of Instances             8720     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.741    0.280    0.693      0.741    0.716      0.460    0.802     0.757     Medium
+                 0.538    0.094    0.633      0.538    0.582      0.471    0.812     0.641     Low
+                 0.626    0.171    0.620      0.626    0.623      0.454    0.820     0.673     High
+Weighted Avg.    0.658    0.203    0.657      0.658    0.656      0.461    0.810     0.704     
+
+=== Confusion Matrix ===
+
+    a    b    c   <-- classified as
+ 2974  362  676 |    a = Medium
+  580 1086  354 |    b = Low
+  739  267 1682 |    c = High
+

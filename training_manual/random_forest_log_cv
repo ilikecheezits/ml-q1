@@ -1,0 +1,58 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     manual_train
+Instances:    34877
+Attributes:   13
+              NOAAClimRegion
+              TempZone
+              HumidZone
+              bin_PlantSize_kW
+              plant_age_months
+              month
+              low_irradiation
+              total_daily_snow_mm
+              cumulative_snow_mm
+              rain_value_mm
+              nearest_rain
+              wind_speed_mean
+              PR_class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 5.55 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       25610               73.4295 %
+Incorrectly Classified Instances      9267               26.5705 %
+Kappa statistic                          0.5834
+Mean absolute error                      0.2214
+Root mean squared error                  0.3515
+Relative absolute error                 51.9177 %
+Root relative squared error             76.1222 %
+Total Number of Instances            34877     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.783    0.197    0.772      0.783    0.778      0.585    0.872     0.853     Medium
+                 0.653    0.092    0.681      0.653    0.667      0.570    0.887     0.743     Low
+                 0.722    0.128    0.716      0.722    0.719      0.593    0.892     0.788     High
+Weighted Avg.    0.734    0.152    0.734      0.734    0.734      0.584    0.882     0.808     
+
+=== Confusion Matrix ===
+
+     a     b     c   <-- classified as
+ 12571  1473  2001 |     a = Medium
+  1722  5279  1079 |     b = Low
+  1997   995  7760 |     c = High
+
